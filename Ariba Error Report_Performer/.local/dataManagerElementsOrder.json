@@ -1,0 +1,92 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SAP Workflow/ExecuteTcodeSQ01WithQueryZCREDIT.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_ClearedDocsWindowExist&Sequence_1",
+        "str_SAPStatusBarText&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DocumentNumbers",
+        "in_SQ01_ClearDocsUsergroup",
+        "in_SQ01_ClearDocsQuery",
+        "in_SQ01_ClearDocsCompanyCode",
+        "in_DestinationPath",
+        "in_FilenameWithExtention",
+        "in_SAPApplicationLocation",
+        "in_ExceptionScreenshotFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SAP Workflow/ExecuteTcodeSQ01WithQueryARIBAINVINFO.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_AribaInvoiceWindowExist&Sequence_1",
+        "str_SAPStatusBarText&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DocumentNumbers",
+        "in_DestinationPath",
+        "in_FilenameWithExtention",
+        "in_SAPApplicationLocation",
+        "in_ExceptionScreenshotFolder",
+        "in_SQ01_AribaInvoiceUsergroup",
+        "in_SQ01_AribaInvoiceQuery",
+        "in_SQ01_AribaInvoicePrecedingValue1",
+        "in_SQ01_AribaInvoicePrecedingValue2"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel Workflows/LookupWE05FileAndZcreditFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_ZcreditClearedDocsFolderPath&Sequence_1",
+        "str_ZcreditClearedDocsFileName&Sequence_1",
+        "dt_AribaInvoices&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_WE05AribaInvoiceFilePath",
+        "in_ZcreditClearedAribaFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
