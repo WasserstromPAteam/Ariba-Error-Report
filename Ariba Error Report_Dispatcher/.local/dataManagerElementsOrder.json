@@ -1,0 +1,99 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Edge Workflows/Ariba Portal Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Secured_Password&Flowchart_1",
+        "Str_UserName&Flowchart_1",
+        "Bool_LoginPage&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Credentials",
+        "in_Url",
+        "In_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Edge Workflows/Navigate to Reports Page.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Edge Workflows/Download Ariba Report.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DownlaodedReport&Sequence_2",
+        "Index&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Logout Ariba.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "In_Url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Execute Tcode WE05.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "applicationwindow&Sequence_1",
+        "Str_Date&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_SegmentNumber",
+        "in_Tcode"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
