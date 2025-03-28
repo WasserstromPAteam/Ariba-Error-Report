@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>941,4664</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1076,4706</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LookupWE05FileAndZcreditFile_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LookupWE05FileAndZcreditFile" sap:VirtualizedContainerService.HintSize="733,4599" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="lookup WE05 file with SQ01 zcredtin file i.e. cleared documnts file w.r.t. Document number column to get cleared Date from zcredit file to WE05 file. remove match found rows from WE05 file keep only unmatched rows in WE05" DisplayName="LookupWE05FileAndZcreditFile" sap:VirtualizedContainerService.HintSize="733,4641" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_ZcreditClearedDocsFolderPath" />
       <Variable x:TypeArguments="x:String" Name="str_ZcreditClearedDocsFileName" />
@@ -120,6 +120,7 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="671,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;lookup WE05 with Zcredit file has been started&quot;]" />
