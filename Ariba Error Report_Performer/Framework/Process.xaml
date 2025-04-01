@@ -119,6 +119,8 @@
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_WE05AribaInvoiceFilePath">[in_TransactionItem.SpecificContent("Ariba MasterFile").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_ZcreditClearedAribaFilePath">[(in_Config("DestinationPath").ToString+"\"+"Cleared Ariba "+Today.ToString("MM-dd-yy")+".xlsx").Replace("\\","\")]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_WE05AribaInvoiceFileSheetName">[in_Config("WE05AribaInvoiceFileSheetName").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ZcreditClearedAribaFileSheetName">[in_Config("ZcreditClearedAribaFileSheetName").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ExecuteTcodeSQ01WithQueryARIBAINVINFO - Invoke Workflow File (SAP Workflow\ExecuteTcodeSQ01WithQueryARIBAINVINFO.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SAP Workflow\ExecuteTcodeSQ01WithQueryARIBAINVINFO.xaml">

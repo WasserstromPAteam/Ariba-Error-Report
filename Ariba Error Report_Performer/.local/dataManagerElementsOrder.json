@@ -79,11 +79,15 @@
       "Path": "Excel Workflows/LookupWE05FileAndZcreditFile.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt1&Sequence_1",
         "str_ZcreditClearedDocsFolderPath&Sequence_1",
         "str_ZcreditClearedDocsFileName&Sequence_1",
         "dt_AribaInvoices&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "argument1",
+        "in_ZcreditClearedAribaFileSheetName",
+        "in_WE05AribaInvoiceFileSheetName",
         "in_WE05AribaInvoiceFilePath",
         "in_ZcreditClearedAribaFilePath"
       ],
