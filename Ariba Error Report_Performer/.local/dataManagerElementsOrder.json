@@ -85,7 +85,6 @@
         "dt_AribaInvoices&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "argument1",
         "in_ZcreditClearedAribaFileSheetName",
         "in_WE05AribaInvoiceFileSheetName",
         "in_WE05AribaInvoiceFilePath",
@@ -150,10 +149,33 @@
     {
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "str_DestinationPath&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
         "in_TransactionItem",
         "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel Workflows/LookupWE05FileAndAribaSAPFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Ariba&Sequence_1",
+        "dt_InvoiceInfo&Sequence_1",
+        "dt_OrderNo&Sequence_1",
+        "dt_DeliverNo&Sequence_1",
+        "RowIndex&Sequence_2",
+        "OrderNumber&Sequence_2",
+        "DeliveryNumber&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_InvoiceInfoSheetName",
+        "in_AribaMasterSheetName",
+        "in_InvoiceInfoFilePath",
+        "in_AribaMasterFilePath"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
