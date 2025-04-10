@@ -41,6 +41,7 @@
         "Bool_LoginPage&Flowchart_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_WaitForElement",
         "in_Credentials",
         "in_Url",
         "In_Config"
@@ -91,6 +92,52 @@
       "ArgumentsSectionElementsOrder": [
         "in_SegmentNumber",
         "in_Tcode"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel workflows/Lookup WE05 file and Ariba SAP  file.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DeliveryNumber&Sequence_2",
+        "OrderNumber&Sequence_2",
+        "RowIndex&Sequence_2",
+        "dt_DeliverNo&Sequence_1",
+        "dt_OrderNo&Sequence_1",
+        "dt_InvoiceInfo&Sequence_1",
+        "dt_Ariba&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_SheetName",
+        "in_InvoiceInfoPath",
+        "in_AribaMasterFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Lookup WE05 and Ariba Report.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Dt_WE05&Sequence_1",
+        "Dt_AribaInvoice&Sequence_1",
+        "Status&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Upload Queue Item.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dataTable&Sequence_1",
+        "DocumentNumbers&Sequence_1",
+        "Dt_WE05&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_WE05Path"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
