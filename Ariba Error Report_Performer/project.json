@@ -1,5 +1,5 @@
 {
-  "name": "Ariba Error Report_Performer",
+  "name": "AribaErrorReport_Performer",
   "projectId": "c5d8ade3-c9bd-49d1-8768-f17dab31c791",
   "description": "performer to perform lookups of WE05 and Zcredit file with Ariva Invoices file",
   "main": "Main.xaml",
@@ -15,7 +15,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

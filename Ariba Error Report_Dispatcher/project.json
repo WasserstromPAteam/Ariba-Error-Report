@@ -1,5 +1,5 @@
 {
-  "name": "Ariba Error Report - Dispatcher",
+  "name": "AribaErrorReport_Dispatcher",
   "projectId": "c9a94de0-0d38-4428-af03-cc9867472cd2",
   "description": "Get the list document numbers which are rejected and not delivered. Uploads them as a queue item",
   "main": "Main.xaml",
