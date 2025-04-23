@@ -12,6 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "PreviousDataExists&Sequence_4",
+        "Str_ScreenShot&StateMachine_1",
+        "ExceptionEmail&Sequence_35",
+        "CC_Emails&Sequence_35",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -22,8 +26,7 @@
         "TransactionField1&StateMachine_1",
         "TransactionID&StateMachine_1",
         "dt_TransactionData&StateMachine_1",
-        "ConsecutiveSystemExceptions&StateMachine_1",
-        "ShouldStop&Sequence_25"
+        "ConsecutiveSystemExceptions&StateMachine_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_OrchestratorQueueName",
@@ -54,6 +57,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "in_WaitPeriod",
         "in_Url"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -67,6 +71,7 @@
         "Index&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_DownloadPath",
         "in_Url"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -138,6 +143,120 @@
       ],
       "ArgumentsSectionElementsOrder": [
         "in_WE05Path"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SAPUserName&Sequence_9",
+        "SAPPassword&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Dt_WE05&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel workflows/Lookup WE05 and Ariba Report.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Dt_AribaInvoice&Sequence_1",
+        "test&Sequence_1",
+        "Status&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_We05File",
+        "in_SheetName",
+        "in_DownloadPath",
+        "in_AribaFile",
+        "inColList",
+        "in_OutputSheet",
+        "out_Dt_WE05"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Core workflows/Upload Queue Item.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DocumentNumbers&Sequence_1",
+        "dataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Dt_WE05",
+        "in_WE05FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Edge Workflows/Logout Ariba.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_WaitPeriod",
+        "In_Url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SAP Workflows/Execute Tcode WE05.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "applicationwindow&Sequence_1",
+        "Str_Date&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ScriptPath",
+        "in_Tcode",
+        "in_SegmentNumber",
+        "in_DownloadPath",
+        "In_FileName"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

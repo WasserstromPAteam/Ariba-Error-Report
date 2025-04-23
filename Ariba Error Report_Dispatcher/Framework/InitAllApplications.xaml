@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>883.3333333333334,1880.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>883.3333333333334,1920.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,6 +112,7 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="416,1776" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -183,6 +184,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_SegmentNumber">[in_Config("SegmentNumber").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_DownloadPath">[in_Config("DownloadPath").ToString+"\"+now.ToString("MMddyy")]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="In_FileName">[in_Config("WE05FileName").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ScriptPath">[in_Config("ExportScript").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

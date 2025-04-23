@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1076,4440</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>883.3333333333334,4084</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExecuteTcodeSQ01WithQueryZCREDIT_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -123,7 +123,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="execute SQ01 tcode in SAP with usergroup ARIBAINVINFO and enter material numbers then Export Excel file" DisplayName="ExecuteTcodeSQ01WithQueryZCREDIT" sap:VirtualizedContainerService.HintSize="512,4375" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="execute SQ01 tcode in SAP with usergroup ARIBAINVINFO and enter material numbers then Export Excel file" DisplayName="ExecuteTcodeSQ01WithQueryZCREDIT" sap:VirtualizedContainerService.HintSize="512,4019.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_AribaInvoiceWindowExist" />
       <Variable x:TypeArguments="x:String" Name="str_SAPStatusBarText" />
@@ -134,10 +134,10 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;executing SQ01 tcode for ariba invoice info and export has been started&quot;]" />
-    <If Condition="[string.IsNullOrEmpty(in_DocumentNumbers) = true]" DisplayName="If-check Documentno empty or not" sap:VirtualizedContainerService.HintSize="450,220" sap2010:WorkflowViewState.IdRef="If_3">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;executing SQ01 tcode for ariba invoice info and export has been started&quot;]" />
+    <If Condition="[string.IsNullOrEmpty(in_DocumentNumbers) = true]" DisplayName="If-check Documentno empty or not" sap:VirtualizedContainerService.HintSize="450,341.3333333333333" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -148,7 +148,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -159,51 +159,54 @@
         </Sequence>
       </If.Else>
     </If>
-    <s:Tcode_SQ01_WithWithoutVariant Execute_Type="Without Variant" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="Tcode_SQ01_WithWithoutVariant_1" Query_Name="[in_SQ01_AribaInvoiceQuery.Trim]" UserGroup_Name="[in_SQ01_AribaInvoiceUsergroup.Trim]">
+    <s:Tcode_SQ01_WithWithoutVariant Execute_Type="Without Variant" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Tcode_SQ01_WithWithoutVariant_1" Query_Name="[in_SQ01_AribaInvoiceQuery.Trim]" UserGroup_Name="[in_SQ01_AribaInvoiceUsergroup.Trim]">
       <s:Tcode_SQ01_WithWithoutVariant.Variant_Name>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </s:Tcode_SQ01_WithWithoutVariant.Variant_Name>
     </s:Tcode_SQ01_WithWithoutVariant>
-    <ui:UiElementExists DisplayName="Element Exists 'Ariba Invoice Wndow'" Exists="[bool_AribaInvoiceWindowExist]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:UiElementExists DisplayName="Element Exists 'Ariba Invoice Wndow'" Exists="[bool_AribaInvoiceWindowExist]" sap:VirtualizedContainerService.HintSize="450,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c1374190-d718-4567-9660-ed6b46331d7c" InformativeScreenshot="1d73cb1571c7a7f6a2ba7e606c31fec9" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*ARIBA INVOICE*' /&gt;&lt;sap id='usr/ctxtSP$00001-LOW' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c1374190-d718-4567-9660-ed6b46331d7c" InformativeScreenshot="1d73cb1571c7a7f6a2ba7e606c31fec9" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*ARIBA INVOICE*' /&gt;&lt;sap id='usr/ctxtSP$00001-LOW' /&gt;" TimeoutMS="60000">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[bool_AribaInvoiceWindowExist]" DisplayName="If- check Ariba Invoice window exists or not" sap:VirtualizedContainerService.HintSize="450,623" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[bool_AribaInvoiceWindowExist]" DisplayName="If- check Ariba Invoice window exists or not" sap:VirtualizedContainerService.HintSize="450,86" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ariba invoice info window exists&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ariba invoice info window exists&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,202.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw Exception="[new BusinessRuleException(&quot;ariba invoice info window does not exists after executing SQ01 tcode with&quot;+in_SQ01_AribaInvoiceUsergroup+&quot;-&quot;+in_SQ01_AribaInvoiceQuery)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          <Throw Exception="[new BusinessRuleException(&quot;ariba invoice info window does not exists after executing SQ01 tcode with&quot;+in_SQ01_AribaInvoiceUsergroup+&quot;-&quot;+in_SQ01_AribaInvoiceQuery)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;entering billing document numbers in mulriple selection&quot;]" />
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Multiple- Billing Doc No.'" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;entering billing document numbers in mulriple selection&quot;]" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Multiple- Billing Doc No.'" sap:VirtualizedContainerService.HintSize="450,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -225,9 +228,9 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <s:Multiple_selection DisplayName="Multiple selection- entring Document no." sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Multiple_selection_1" MultipleSelectionString="[in_DocumentNumbers]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;entering preceding values in multiple selection&quot;]" />
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Multiple - preceding values'" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <s:Multiple_selection DisplayName="Multiple selection- entring Document no." sap:VirtualizedContainerService.HintSize="450,124" sap2010:WorkflowViewState.IdRef="Multiple_selection_1" MultipleSelectionString="[in_DocumentNumbers]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;entering preceding values in multiple selection&quot;]" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button Multiple - preceding values'" sap:VirtualizedContainerService.HintSize="450,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -249,9 +252,9 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <s:Multiple_selection DisplayName="Multiple selection" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Multiple_selection_2" MultipleSelectionString="[in_SQ01_AribaInvoicePrecedingValue1+Environment.NewLine+in_SQ01_AribaInvoicePrecedingValue2]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;click on execute&quot;]" />
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Execute (F8)'" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <s:Multiple_selection DisplayName="Multiple selection" sap:VirtualizedContainerService.HintSize="450,124" sap2010:WorkflowViewState.IdRef="Multiple_selection_2" MultipleSelectionString="[in_SQ01_AribaInvoicePrecedingValue1+Environment.NewLine+in_SQ01_AribaInvoicePrecedingValue2]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;click on execute&quot;]" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Execute (F8)'" sap:VirtualizedContainerService.HintSize="450,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -273,7 +276,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane No'" sap:VirtualizedContainerService.HintSize="450,298" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[str_SAPStatusBarText]">
+    <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane No'" sap:VirtualizedContainerService.HintSize="450,303.3333333333333" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[str_SAPStatusBarText]">
       <ucas:ReadStatusbar.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="30dba5ba-9f5b-40e8-ad78-8f6db1b7fb48" InformativeScreenshot="27fb792f5388678365342bff49784330" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='*ARIBA INVOICE*' /&gt;&lt;sap id='sbar/pane[0]' /&gt;">
           <ui:Target.TimeoutMS>
@@ -285,32 +288,32 @@
         </ui:Target>
       </ucas:ReadStatusbar.Target>
     </ucas:ReadStatusbar>
-    <If Condition="[str_SAPStatusBarText.ToUpper.Contains(&quot;NO DATA&quot;)]" DisplayName="If- check sap message no data available" sap:VirtualizedContainerService.HintSize="450,623" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[str_SAPStatusBarText.ToUpper.Contains(&quot;NO DATA&quot;)]" DisplayName="If- check sap message no data available" sap:VirtualizedContainerService.HintSize="450,630" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,202.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw Exception="[New BusinessRuleException(&quot;no data available to export in ariba invoice info in SAP SQ01 &quot;+in_SQ01_AribaInvoiceUsergroup+&quot;-&quot;+in_SQ01_AribaInvoiceQuery)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_2" />
+          <Throw Exception="[New BusinessRuleException(&quot;no data available to export in ariba invoice info in SAP SQ01 &quot;+in_SQ01_AribaInvoiceUsergroup+&quot;-&quot;+in_SQ01_AribaInvoiceQuery)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;data available for export&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;data available for export&quot;]" />
         </Sequence>
       </If.Else>
     </If>
-    <s:Export_ExcelFile_Spreadsheet DestinationPath="[in_DestinationPath]" EnterFileNamePathDirectly="False" ExportWaitTimeout_Seconds="100" FileNameWithExtension="[in_FilenameWithExtention]" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="Export_ExcelFile_Spreadsheet_2" />
-    <s:Sap_Logout_or_Back Output_ScreenshotFile="{x:Null}" Command="Back" DisplayName="SAP Logout / Back" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="Sap_Logout_or_Back_1" SAP_ApplicationLocation="[in_SAPApplicationLocation]" ScreenshotFolderPath="[in_ExceptionScreenshotFolder]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;executing SQ01 tcode for ariba invoice info and export ended&quot;]" />
+    <s:Export_ExcelFile_Spreadsheet DestinationPath="[in_DestinationPath]" EnterFileNamePathDirectly="False" ExportWaitTimeout_Seconds="100" FileNameWithExtension="[in_FilenameWithExtention]" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Export_ExcelFile_Spreadsheet_2" />
+    <s:Sap_Logout_or_Back Output_ScreenshotFile="{x:Null}" Command="Back" DisplayName="SAP Logout / Back" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Sap_Logout_or_Back_1" SAP_ApplicationLocation="[in_SAPApplicationLocation]" ScreenshotFolderPath="[in_ExceptionScreenshotFolder]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;executing SQ01 tcode for ariba invoice info and export ended&quot;]" />
   </Sequence>
 </Activity>

@@ -4,11 +4,12 @@
     <x:Property Name="in_SegmentNumber" Type="InArgument(x:String)" />
     <x:Property Name="in_DownloadPath" Type="InArgument(x:String)" />
     <x:Property Name="In_FileName" Type="InArgument(x:String)" />
+    <x:Property Name="in_ScriptPath" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>883.3333333333334,4551.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>883.3333333333334,4303.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Execute_Tcode_WE05_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,9 +116,10 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>SAP Resuable Components</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Execute_Tcode_WE05" sap:VirtualizedContainerService.HintSize="608,4446.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Execute_Tcode_WE05" sap:VirtualizedContainerService.HintSize="608,4238.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Window" Name="applicationwindow">
         <sap:WorkflowViewStateService.ViewState>
@@ -134,13 +136,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="1. Log Message" sap:VirtualizedContainerService.HintSize="546,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Initiated executing Tcode WE05&quot;]" />
-    <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[applicationwindow]" DisplayName="2. Attach Window 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="546,4182" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="be6abcb68e9e55915c15466d2133fe98" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access*' /&gt;">
+    <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[applicationwindow]" DisplayName="2. Attach Window 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="546,3974" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="be6abcb68e9e55915c15466d2133fe98" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access*' /&gt;">
       <ui:WindowScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,4012" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,3804" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Str_Date" />
             </Sequence.Variables>
@@ -488,53 +490,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'saplogon.exe List'" sap:VirtualizedContainerService.HintSize="450,188.66666666666666" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:ClickImage.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:ClickImage.CursorPosition>
-              <ui:ClickImage.Image>
-                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.5" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAbCAYAAAAULC3gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEoSURBVFhH5dW/jYMwGIfhzMIUkTLFzRCJOVxnAxeIAgbAA1xznXuqq9zcDBbV72IDkf98seAIh6VEeqUoMR+PMCGnYRiQU/mBmqZBDrVtO4KQycugLEhrCV6WKFfFIJSG1q8rfxATilwYJfl/glJXa0K8OYhe7OWC7HsfzeXCOUE7gcYWz3Jat2VMQM0H9zWuvT/MpAR7fsyCNoAYTrcLzl/f3sAIZI/jkM6aVH/fsglkUd0nvcakBNh9LpfEd0RJUNeNJ1xUVaN3Bj86DGSqGDpnuO1w0E9wkgSoKIros0O3bDUoWXBTkxgTATKQOW/tvc2g8GcfFYBczItB9IMxaisoeqhFrfxDnUAfFx9yOIi6qakcEL1gc/uDFASjrly6dwLt2wga8Av0CM7cWuiAnQAAAABJRU5ErkJggg==" />
-              </ui:ClickImage.Image>
-              <ui:ClickImage.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="95ea17f8-0b86-4761-b32e-b7df4d4d3236">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:ClickImage.Target>
-            </ui:ClickImage>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Spreadsheet'" sap:VirtualizedContainerService.HintSize="450,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:Click.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:Click.CursorPosition>
-              <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b4e99042-e9e9-48f4-8c41-7fb2902b2860" InformativeScreenshot="c4594efc7fd773cc1b1374504e6fc086" Selector="&lt;wnd aaname='Context' app='saplogon.exe' cls='#32768' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='1' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:Click.Target>
-            </ui:Click>
+            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="[in_ScriptPath]" sap:VirtualizedContainerService.HintSize="450,120" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
             <s1:Export_ExcelFile_Spreadsheet DestinationPath="[in_DownloadPath]" EnterFileNamePathDirectly="True" ExportWaitTimeout_Seconds="10" FileNameWithExtension="[In_FileName]" sap:VirtualizedContainerService.HintSize="450,272.6666666666667" sap2010:WorkflowViewState.IdRef="Export_ExcelFile_Spreadsheet_1" />
           </Sequence>
         </ActivityAction>
