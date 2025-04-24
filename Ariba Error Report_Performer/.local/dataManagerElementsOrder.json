@@ -42,6 +42,7 @@
         "str_SAPStatusBarText&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_ExportWaitTimeout",
         "in_DocumentNumbers",
         "in_SQ01_ClearDocsUsergroup",
         "in_SQ01_ClearDocsQuery",
@@ -62,6 +63,7 @@
         "str_SAPStatusBarText&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_ExportWaitTimeout",
         "in_DocumentNumbers",
         "in_DestinationPath",
         "in_FilenameWithExtention",

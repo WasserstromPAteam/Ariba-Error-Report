@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>883.3333333333334,1920.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1079,1798</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,7 +115,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="416,1776" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="416,1733" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="SAPUserName" />
       <Variable x:TypeArguments="ss:SecureString" Name="SAPPassword" />
@@ -126,7 +126,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]">
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +134,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Getting SAP Credentials from Orchestartor&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Getting SAP Credentials from Orchestartor&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,7 +142,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;SAP_Credentials&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[SAPPassword]" Username="[SAPUserName]">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;SAP_Credentials&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[SAPPassword]" Username="[SAPUserName]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,7 +150,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <s:SapLogin Output_ScreenshotFile="{x:Null}" ClientNumber="[in_Config(&quot;SAP_Client&quot;).ToString]" ConnectionName="[in_Config(&quot;SAP_server&quot;).ToString]" DisplayName="Sap_Login" sap:VirtualizedContainerService.HintSize="354,282" sap2010:WorkflowViewState.IdRef="SapLogin_1" SAP_Language="[in_Config(&quot;SAP_Language&quot;).ToString]" SAP_Password="[SAPPassword]" SAP_UserName="[SAPUserName]" SapLocation="[in_Config(&quot;SAPFile_Location&quot;).ToString]" ScreenshotFolderPath="[environment.CurrentDirectory+&quot;\&quot;+in_Config(&quot;ExScreenshotsFolderPath&quot;).ToString]">
+    <s:SapLogin Output_ScreenshotFile="{x:Null}" ClientNumber="[in_Config(&quot;SAP_Client&quot;).ToString]" ConnectionName="[in_Config(&quot;SAP_server&quot;).ToString]" DisplayName="Sap_Login" sap:VirtualizedContainerService.HintSize="354,275" sap2010:WorkflowViewState.IdRef="SapLogin_1" SAP_Language="[in_Config(&quot;SAP_Language&quot;).ToString]" SAP_Password="[SAPPassword]" SAP_UserName="[SAPUserName]" SapLocation="[in_Config(&quot;SAPFile_Location&quot;).ToString]" ScreenshotFolderPath="[environment.CurrentDirectory+&quot;\&quot;+in_Config(&quot;ExScreenshotsFolderPath&quot;).ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,7 +158,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </s:SapLogin>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ariba Portal Login - Invoke Workflow File (Edge Workflows\Ariba Portal Login.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Edge Workflows\Ariba Portal Login.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Ariba Portal Login - Invoke Workflow File (Edge Workflows\Ariba Portal Login.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Edge Workflows\Ariba Portal Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="In_Config">[in_Config]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">[in_Config("AribaPortal").ToString]</InArgument>
@@ -166,19 +166,19 @@
         <InArgument x:TypeArguments="x:Int32" x:Key="in_WaitForElement">[cint(in_Config("WaitPeriod"))]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to Reports Page - Invoke Workflow File (Edge Workflows\Navigate to Reports Page.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Edge Workflows\Navigate to Reports Page.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to Reports Page - Invoke Workflow File (Edge Workflows\Navigate to Reports Page.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Edge Workflows\Navigate to Reports Page.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">[in_Config("AribaPortal").ToString]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_WaitPeriod">[CInt(in_Config("WaitPeriod"))]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Download Ariba Report - Invoke Workflow File (Edge Workflows\Download Ariba Report.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Edge Workflows\Download Ariba Report.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Download Ariba Report - Invoke Workflow File (Edge Workflows\Download Ariba Report.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Edge Workflows\Download Ariba Report.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">[in_Config("AribaPortal").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_DownloadPath">[in_Config("DownloadPath").ToString+"\"+now.ToString("MMddyy")]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute Tcode WE05 - Invoke Workflow File (SAP Workflows\Execute Tcode WE05.xaml)" sap:VirtualizedContainerService.HintSize="354,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SAP Workflows\Execute Tcode WE05.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute Tcode WE05 - Invoke Workflow File (SAP Workflows\Execute Tcode WE05.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SAP Workflows\Execute Tcode WE05.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Tcode">[in_Config("Tcode").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_SegmentNumber">[in_Config("SegmentNumber").ToString]</InArgument>

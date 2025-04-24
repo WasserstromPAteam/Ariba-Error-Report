@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ExecuteTcodeSQ01WithQueryZCREDIT" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_DocumentNumbers="9423053827" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_SQ01_ClearDocsUsergroup="ZCREDIT" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_SQ01_ClearDocsQuery="CLEAREDDOCS" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_SQ01_ClearDocsCompanyCode="TWC1" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_DestinationPath="C:\Users\AnkushMyadam\Documents\UiPath\Ariba Performer Features\Data\Output" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_FilenameWithExtention="Test13.xlsx" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_SAPApplicationLocation="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:SAP_Resuable_Components;assembly=SAP Resuable Components" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ExecuteTcodeSQ01WithQueryZCREDIT" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_DocumentNumbers="9423053827" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_SQ01_ClearDocsUsergroup="ZCREDIT" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_SQ01_ClearDocsQuery="CLEAREDDOCS" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_SQ01_ClearDocsCompanyCode="TWC1" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_DestinationPath="C:\Users\AnkushMyadam\Documents\UiPath\Ariba Performer Features\Data\Output" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_FilenameWithExtention="Test13.xlsx" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_SAPApplicationLocation="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" this:ExecuteTcodeSQ01WithQueryZCREDIT.in_ExportWaitTimeout="100" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:SAP_Resuable_Components;assembly=SAP Resuable Components" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_DocumentNumbers" Type="InArgument(x:String)" />
     <x:Property Name="in_SQ01_ClearDocsUsergroup" Type="InArgument(x:String)" />
@@ -8,11 +8,12 @@
     <x:Property Name="in_FilenameWithExtention" Type="InArgument(x:String)" />
     <x:Property Name="in_SAPApplicationLocation" Type="InArgument(x:String)" />
     <x:Property Name="in_ExceptionScreenshotFolder" Type="InArgument(x:String)" />
+    <x:Property Name="in_ExportWaitTimeout" Type="InArgument(x:Int32)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1076,3784</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1079,3560</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExecuteTcodeSQ01WithQueryZCREDIT_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -121,7 +122,7 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="execute SQ01 tcode in SAP with usergroup Zcredit and enter material numbers then Export Excel file" DisplayName="ExecuteTcodeSQ01WithQueryZCREDIT" sap:VirtualizedContainerService.HintSize="512,3719" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="execute SQ01 tcode in SAP with usergroup Zcredit and enter material numbers then Export Excel file" DisplayName="ExecuteTcodeSQ01WithQueryZCREDIT" sap:VirtualizedContainerService.HintSize="512,3495" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_ClearedDocsWindowExist" />
       <Variable x:TypeArguments="x:String" Name="str_SAPStatusBarText" />
@@ -133,9 +134,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;executing SQ01 tcode for cleared documents and export has been started&quot;]" />
-    <If Condition="[string.IsNullOrEmpty(in_DocumentNumbers) = true]" DisplayName="If-mcheck Documentno expty or not" sap:VirtualizedContainerService.HintSize="450,332" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[string.IsNullOrEmpty(in_DocumentNumbers) = true]" DisplayName="If-mcheck Documentno expty or not" sap:VirtualizedContainerService.HintSize="450,220" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,81" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -146,7 +147,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,81" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -272,9 +273,9 @@
         </ui:Target>
       </ucas:ReadStatusbar.Target>
     </ucas:ReadStatusbar>
-    <If Condition="[str_SAPStatusBarText.ToUpper.Contains(&quot;NO DATA&quot;)]" DisplayName="If- check sap message no data available" sap:VirtualizedContainerService.HintSize="450,332" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[str_SAPStatusBarText.ToUpper.Contains(&quot;NO DATA&quot;)]" DisplayName="If- check sap message no data available" sap:VirtualizedContainerService.HintSize="450,220" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,81" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -285,7 +286,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,81" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -296,7 +297,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <s:Export_ExcelFile_Spreadsheet DestinationPath="[in_DestinationPath]" EnterFileNamePathDirectly="False" ExportWaitTimeout_Seconds="100" FileNameWithExtension="[in_FilenameWithExtention]" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="Export_ExcelFile_Spreadsheet_2" />
+    <s:Export_ExcelFile_Spreadsheet DestinationPath="[in_DestinationPath]" EnterFileNamePathDirectly="False" ExportWaitTimeout_Seconds="[in_ExportWaitTimeout]" FileNameWithExtension="[in_FilenameWithExtention]" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="Export_ExcelFile_Spreadsheet_2" />
     <s:Sap_Logout_or_Back Output_ScreenshotFile="{x:Null}" Command="Back" DisplayName="SAP Logout / Back" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="Sap_Logout_or_Back_1" SAP_ApplicationLocation="[in_SAPApplicationLocation]" ScreenshotFolderPath="[in_ExceptionScreenshotFolder]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;executing SQ01 tcode for cleared documents and export ended&quot;]" />
   </Sequence>

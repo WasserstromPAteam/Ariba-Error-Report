@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>883.3333333333334,1408</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>881,1393</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Ariba_Portal_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,27 +108,27 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Opens Edge browser, Gets Credentials from Orchestrator. Logins into the Ariba portal. &#xA;&#xA;If fails to login due to invalid credentials, business exception is thrown.&#xA;&#xA;If fails to load the page(Porta down), system exception is thrown" DisplayName="Ariba_Portal_Login" sap:VirtualizedContainerService.HintSize="758,1343.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Opens Edge browser, Gets Credentials from Orchestrator. Logins into the Ariba portal. &#xA;&#xA;If fails to login due to invalid credentials, business exception is thrown.&#xA;&#xA;If fails to load the page(Porta down), system exception is thrown" DisplayName="Ariba_Portal_Login" sap:VirtualizedContainerService.HintSize="758,1328" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="1. Log Message" sap:VirtualizedContainerService.HintSize="696,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Ariba portal login initiated&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="2. Use Browser Edge: Dashboard | SAP Business Network" sap:VirtualizedContainerService.HintSize="696,983.3333333333334" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="36810152-3f77-495e-a88b-9310015db6f1" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="1. Log Message" sap:VirtualizedContainerService.HintSize="696,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Ariba portal login initiated&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="2. Use Browser Edge: Dashboard | SAP Business Network" sap:VirtualizedContainerService.HintSize="696,980" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="36810152-3f77-495e-a88b-9310015db6f1" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="662,741.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="662,740" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Flowchart DisplayName="3. Flowchart" sap:VirtualizedContainerService.HintSize="600,650.6666666666666" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+            <Flowchart DisplayName="3. Flowchart" sap:VirtualizedContainerService.HintSize="600,650" sap2010:WorkflowViewState.IdRef="Flowchart_1">
               <Flowchart.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="Bool_LoginPage" />
                 <Variable x:TypeArguments="x:String" Name="Str_UserName" />
@@ -156,7 +156,7 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:UiElementExists DisplayName="4. Element Exists - Login Page" Exists="[Bool_LoginPage]" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="75644e2c-9151-433a-b72a-19899dbf84bd" InformativeScreenshot="b67b54f11e0e5e43038405736ef90c56" Selector="&lt;html app='msedge.exe' title='SAP Business Network Supplier' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='DIV' aaname='*sign-in*' innertext='*sign-in*' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="75644e2c-9151-433a-b72a-19899dbf84bd" InformativeScreenshot="b67b54f11e0e5e43038405736ef90c56" Selector="&lt;html app='msedge.exe' title='*Business Network*' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='DIV' aaname='*sign-in*' innertext='*sign-in*' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -172,14 +172,14 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:UiElementExists>
                 <FlowStep.Next>
-                  <FlowDecision x:Name="__ReferenceID0" Condition="[Bool_LoginPage]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60.666666666666664,60.666666666666664" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                  <FlowDecision x:Name="__ReferenceID0" Condition="[Bool_LoginPage]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <av:Point x:Key="ShapeLocation">270,240</av:Point>
-                        <av:Size x:Key="ShapeSize">60.666666666666664,60.666666666666664</av:Size>
+                        <av:Size x:Key="ShapeSize">59,59</av:Size>
                         <av:PointCollection x:Key="TrueConnector">270,270.3333333333333 170,270.3333333333333 170,315</av:PointCollection>
-                        <av:PointCollection x:Key="FalseConnector">330.6666666666667,270.3333333333333 430,270.3333333333333 430,315</av:PointCollection>
+                        <av:PointCollection x:Key="FalseConnector">329,269.5 430,269.5 430,315</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <FlowDecision.True>
@@ -210,24 +210,14 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="7. Type Into 'Supplier sign-in'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" Text="[Str_UserName]" Version="V3">
                               <uix:NTypeInto.Target>
-                                <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Supplier.aw/109532046/aw?awh=r&amp;awssk=dMr6Rh5w&amp;dard=1" CVScreenId="e33d4564-5ad6-4ee0-a6db-96b496c72021" CvElementArea="91, 527, 520, 100" CvType="InputBox" DesignTimeRectangle="95, 540, 513, 75" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='userid' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl id='userid' type='text' tag='INPUT' /&gt;" Guid="03ed16dc-3ebc-4173-ad88-39440a10907b" ImageBase64="" InformativeScreenshot="b5a9eb88a8a75711bf95234951b5d1f3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SAP Business Network Supplier' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Supplier.aw/109532046/aw?awh=r&amp;awssk=dMr6Rh5w&amp;dard=1" CVScreenId="e33d4564-5ad6-4ee0-a6db-96b496c72021" CvElementArea="91, 527, 520, 100" CvType="InputBox" DesignTimeRectangle="333, 360, 342, 50" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='userid' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl id='userid' type='text' tag='INPUT' /&gt;" Guid="03ed16dc-3ebc-4173-ad88-39440a10907b" ImageBase64="" InformativeScreenshot="b01e8c618d3dca1a6660fd5f83c68876.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Business Network*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CVScreenId="e33d4564-5ad6-4ee0-a6db-96b496c72021" CvTextArea="92, 392, 246, 40" CvTextArgument="Supplier sign-in" CvType="Text" DesignTimeRectangle="94, 375, 736, 87" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='suplier-login-page-form-txt' aaname='   Supplier sign-in   ' check:innerText='Supplier sign-in' /&gt;" Guid="8a2185f6-8125-46fa-9a5c-8ad1335528d7" SearchSteps="FuzzySelector, CV" />
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target CVScreenId="e33d4564-5ad6-4ee0-a6db-96b496c72021" CvTextArea="92, 392, 246, 40" CvTextArgument="Supplier sign-in" CvType="Text" DesignTimeRectangle="332, 250, 491, 58" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='suplier-login-page-form-txt' aaname='   Supplier sign-in   ' check:innerText='Supplier sign-in' /&gt;" Guid="8a2185f6-8125-46fa-9a5c-8ad1335528d7" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
                                 </uix:TargetAnchorable>
                               </uix:NTypeInto.Target>
-                              <uix:NTypeInto.VerifyOptions>
-                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                    <InArgument x:TypeArguments="x:Boolean" />
-                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                    <InArgument x:TypeArguments="x:Double" />
-                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                </uix:VerifyExecutionTypeIntoOptions>
-                              </uix:NTypeInto.VerifyOptions>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -245,10 +235,10 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="8. Click 'Next'" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" Version="V3">
                                   <uix:NClick.Target>
-                                    <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Supplier.aw/109532046/aw?awh=r&amp;awssk=dMr6Rh5w&amp;dard=1" CVScreenId="ae9f42f8-2fcc-4204-ad46-a578863d9e2c" CvElementArea="90, 653, 200, 73" CvTextArea="161, 674, 60, 25" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="94, 656, 195, 63" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='ies-button-container' aaname='  ' check:innerText='Next' /&gt;" Guid="acd2b58a-5599-473d-add7-9e37bf16c22a" InformativeScreenshot="fb3c4d3cb40e3c3df01a8d9ee15b8dd6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SAP Business Network Supplier' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                    <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Supplier.aw/109532046/aw?awh=r&amp;awssk=dMr6Rh5w&amp;dard=1" CVScreenId="ae9f42f8-2fcc-4204-ad46-a578863d9e2c" CvElementArea="90, 653, 200, 73" CvTextArea="161, 674, 60, 25" CvTextArgument="Next" CvType="Button" DesignTimeRectangle="332, 438, 130, 42" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='ies-button-container' aaname='  ' check:innerText='Next' /&gt;" Guid="acd2b58a-5599-473d-add7-9e37bf16c22a" ImageBase64="" InformativeScreenshot="eb30ede186b817badc4597c16cf0418f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Business Network*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target CVScreenId="ae9f42f8-2fcc-4204-ad46-a578863d9e2c" CvElementArea="91, 528, 519, 99" CvType="InputBox" DesignTimeRectangle="95, 532, 513, 90" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='pfc pfc' aaname='      ' /&gt;" Guid="68ff2387-65f1-4534-92c7-42b3ddc59b61" SearchSteps="FuzzySelector, CV" />
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CVScreenId="ae9f42f8-2fcc-4204-ad46-a578863d9e2c" CvElementArea="91, 528, 519, 99" CvType="InputBox" DesignTimeRectangle="333, 355, 342, 60" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='pfc pfc' aaname='      ' /&gt;" Guid="68ff2387-65f1-4534-92c7-42b3ddc59b61" SearchSteps="FuzzySelector, CV" />
                                         </scg:List>
                                       </uix:TargetAnchorable.Anchors>
                                     </uix:TargetAnchorable>
@@ -270,10 +260,10 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                     <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="9. Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" SecureText="[Secured_Password]" Version="V3">
                                       <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Authenticator.aw/109552031/aw?awh=r&amp;awssk=pvvqwNBP" CVScreenId="770ca3c0-d494-4ffd-bb95-00ab795c21d2" CvElementArea="1089, 534, 394, 58" CvType="InputBox" DesignTimeRectangle="1092, 537, 389, 53" DesignTimeScaleFactor="1.5" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='Password' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl id='Password' type='password' tag='INPUT' /&gt;" Guid="9cc60f63-a8e1-423d-ba1b-aa66b969e997" ImageBase64="" InformativeScreenshot="a59b222f393f5af1f3d401454084cbfc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Business Network' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                        <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Authenticator.aw/109552031/aw?awh=r&amp;awssk=pvvqwNBP" CVScreenId="770ca3c0-d494-4ffd-bb95-00ab795c21d2" CvElementArea="1089, 534, 394, 58" CvType="InputBox" DesignTimeRectangle="1057, 358, 260, 36" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='Password' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl id='Password' type='password' tag='INPUT' /&gt;" Guid="9cc60f63-a8e1-423d-ba1b-aa66b969e997" ImageBase64="" InformativeScreenshot="9013a805a754f24103df4d6222a7b76e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Business Network*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="770ca3c0-d494-4ffd-bb95-00ab795c21d2" CvTextArea="1091, 504, 90, 19" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="1092, 504, 390, 33" ElementType="Text" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='sbn-input-label' aaname=' Password ' check:innerText='Password' /&gt;" Guid="10acc607-f92e-4d92-8194-aaed8861286f" SearchSteps="FuzzySelector, CV" />
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="770ca3c0-d494-4ffd-bb95-00ab795c21d2" CvTextArea="1091, 504, 90, 19" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="1057, 336, 260, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='sbn-input-label' aaname=' Password ' check:innerText='Password' /&gt;" Guid="10acc607-f92e-4d92-8194-aaed8861286f" SearchSteps="FuzzySelector, CV" />
                                             </scg:List>
                                           </uix:TargetAnchorable.Anchors>
                                         </uix:TargetAnchorable>
@@ -295,10 +285,10 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                         <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="10. Click 'Sign in'" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" Version="V3">
                                           <uix:NClick.Target>
-                                            <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Authenticator.aw/109552031/aw?awh=r&amp;awssk=pvvqwNBP" CVScreenId="770ca3c0-d494-4ffd-bb95-00ab795c21d2" CvElementArea="1087, 617, 398, 59" CvTextArea="1253, 633, 67, 27" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="1256, 634, 63, 23" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='bn-loader-text' aaname=' Sign in ' check:innerText='Sign in' /&gt;" Guid="48dab1b0-b5ff-4a65-aa04-4984e3fac8b1" InformativeScreenshot="f43e2217716a39c264b4b1f7a1b5227d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Business Network' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                            <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Authenticator.aw/109552031/aw?awh=r&amp;awssk=pvvqwNBP" CVScreenId="770ca3c0-d494-4ffd-bb95-00ab795c21d2" CvElementArea="1087, 617, 398, 59" CvTextArea="1253, 633, 67, 27" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="1166, 515, 41, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='bn-loader-text' aaname=' Sign in ' check:innerText='Sign in' /&gt;" Guid="48dab1b0-b5ff-4a65-aa04-4984e3fac8b1" ImageBase64="" InformativeScreenshot="58d477f753fda24b65e506956eb94ff5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Business Network*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                               <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target CVScreenId="770ca3c0-d494-4ffd-bb95-00ab795c21d2" CvElementArea="1089, 534, 394, 58" CvType="InputBox" DesignTimeRectangle="1092, 537, 389, 53" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='Password' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl id='Password' type='password' tag='INPUT' class='w-psw w-psw-width' aaname='' /&gt;" Guid="5fe8a773-a3f3-4587-a16d-75d0d449a3b1" SearchSteps="FuzzySelector, CV" />
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                  <uix:Target CVScreenId="770ca3c0-d494-4ffd-bb95-00ab795c21d2" CvElementArea="1089, 534, 394, 58" CvType="InputBox" DesignTimeRectangle="1057, 450, 260, 36" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='Password' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl id='Password' type='password' tag='INPUT' class='w-psw w-psw-width' aaname='' /&gt;" Guid="5fe8a773-a3f3-4587-a16d-75d0d449a3b1" SearchSteps="FuzzySelector, CV" />
                                                 </scg:List>
                                               </uix:TargetAnchorable.Anchors>
                                             </uix:TargetAnchorable>
@@ -317,49 +307,49 @@
                                                 <av:Size x:Key="ShapeSize">110,70</av:Size>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <uix:NCheckState DisplayName="11. Check App State 'HomeEnablementStoreDisc…'" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" Timeout="[in_WaitForElement]" Version="V3">
+                                            <uix:NCheckState DisplayName="11. Check App State 'HomeEnablementStoreDisc…'" sap:VirtualizedContainerService.HintSize="1520,754" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" Timeout="[in_WaitForElement]" Version="V3">
                                               <uix:NCheckState.IfExists>
-                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,263.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:LogMessage DisplayName="11.1 Log Message" sap:VirtualizedContainerService.HintSize="388,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sucessfully logged into Ariba Portal&quot;]" />
+                                                  <ui:LogMessage DisplayName="11.1 Log Message" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sucessfully logged into Ariba Portal&quot;]" />
                                                 </Sequence>
                                               </uix:NCheckState.IfExists>
                                               <uix:NCheckState.IfNotExists>
-                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1016,545.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1016,537" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <uix:NCheckState DisplayName="11.2 Check App State 'email'" sap:VirtualizedContainerService.HintSize="954,454.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" Timeout="[in_WaitForElement]" Version="V3">
+                                                  <uix:NCheckState DisplayName="11.2 Check App State 'email'" sap:VirtualizedContainerService.HintSize="954,447" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" Timeout="[in_WaitForElement]" Version="V3">
                                                     <uix:NCheckState.IfExists>
-                                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,208" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Throw DisplayName="11.3 Throw - Business Exception(Login Failed)" Exception="[New BusinessRuleException(&quot;Failed to Login into Ariba Portal due to Invalid Credentials&quot;)]" sap:VirtualizedContainerService.HintSize="388,117.33333333333333" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                                        <Throw DisplayName="11.3 Throw - Business Exception(Login Failed)" Exception="[New BusinessRuleException(&quot;Failed to Login into Ariba Portal due to Invalid Credentials&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_3" />
                                                       </Sequence>
                                                     </uix:NCheckState.IfExists>
                                                     <uix:NCheckState.IfNotExists>
-                                                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,208" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Throw DisplayName="11.4 Throw - Application Exception(Login Failed)" Exception="[New ApplicationException(&quot;Failed to Login into Ariba Portal&quot;)]" sap:VirtualizedContainerService.HintSize="388,117.33333333333333" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                                        <Throw DisplayName="11.4 Throw - Application Exception(Login Failed)" Exception="[New ApplicationException(&quot;Failed to Login into Ariba Portal&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
                                                       </Sequence>
                                                     </uix:NCheckState.IfNotExists>
                                                     <uix:NCheckState.Target>
-                                                      <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Authenticator.aw/ad/ssoIDP#b0" DesignTimeRectangle="1092, 504, 389, 92" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='sbn-error-container' aaname='  ' check:innerText='The username and password pair you entered was not found.' /&gt;" Guid="f63e3ba3-5fca-4bd3-b484-48b8c6d891a4" InformativeScreenshot="cec17e939baecfc2d4ad83c9e8a7dc61.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Business Network' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                                      <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Authenticator.aw/ad/ssoIDP#b0" DesignTimeRectangle="1092, 504, 389, 92" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl parentname='loginForm' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='loginForm' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='sbn-error-container' aaname='  ' check:innerText='The username and password pair you entered was not found.' /&gt;" Guid="f63e3ba3-5fca-4bd3-b484-48b8c6d891a4" ImageBase64="" InformativeScreenshot="0096e50108d7d5b5822730125cd1ba99.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Business Network*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                                                         <uix:TargetAnchorable.Anchors>
-                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                                                             <uix:Target CVScreenId="2c442edb-ef1f-4f3c-8fb7-666f9a8ac212" CvTextArea="1118, 443, 232, 24" CvTextArgument="ariba@wasserstrom.com" CvType="Text" DesignTimeRectangle="1121, 443, 229, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='4' tag='TABLE' /&gt;&lt;webctrl aaname='ariba@wasserstrom.com' parentname='loginForm' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='ariba@wasserstrom.com' parentname='loginForm' type='' tag='DIV' class='' check:innerText='ariba@wasserstrom.com' /&gt;" Guid="bc23a47f-9338-4fba-b35f-6344b6a2d119" SearchSteps="FuzzySelector, CV" />
                                                           </scg:List>
                                                         </uix:TargetAnchorable.Anchors>
@@ -369,10 +359,10 @@
                                                 </Sequence>
                                               </uix:NCheckState.IfNotExists>
                                               <uix:NCheckState.Target>
-                                                <uix:TargetAnchorable BrowserURL="https://portal.us.bn.cloud.ariba.com/dashboard/home" DesignTimeRectangle="89, 134, 1008, 54" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;div&amp;gt;app-dashboard&amp;gt;div&amp;gt;sc-shellbar&amp;gt;div&amp;gt;div&amp;gt;fd-shellbar&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='fd-shellbar__group fd-shellbar__group--product' aaname='' check:innerText='Business Network&amp;#xD;&amp;#xA;Enterprise Account' /&gt;" Guid="f8bcc414-6198-454c-8719-ccc08daeac09" InformativeScreenshot="ad56bf2f059a77dd6b4324de5c850ecd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard | SAP Business Network' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                                <uix:TargetAnchorable BrowserURL="https://portal.us.bn.cloud.ariba.com/dashboard/home" CVScreenId="5ed4dfa8-d51e-4323-9829-9ac17f77d675" CvElementArea="1149, 151, 17, 18" CvTextArea="1094, 153, 53, 16" CvTextArgument="Reports" CvType="ArrowButton" DesignTimeRectangle="1090, 134, 77, 52" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='menu-item' parentid='tpp.reports' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='menu-item' parentid='tpp.reports' tag='DIV' type='' aaname='' check:innerText='Reports' /&gt;" Guid="b857d75a-018f-444d-b8fd-4f4e6ad5e8ef" ImageBase64="" InformativeScreenshot="c4fbdefd77ba0f87ef2b23d4ffbe2891.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Business Network*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                   <uix:TargetAnchorable.Anchors>
-                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                      <uix:Target DesignTimeRectangle="17, 200, 2160, 78" FullSelectorArgument="&lt;webctrl class='menu-bar-container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='menu-bar-container' tag='DIV' type='' aaname='' check:innerText='Home&amp;#xD;&amp;#xA;Enablement&amp;#xD;&amp;#xA;Store&amp;#xD;&amp;#xA;Discovery&amp;#xD;&amp;#xA;Workbench&amp;#xD;&amp;#xA;Orders&amp;#xD;&amp;#xA;Fulfillment&amp;#xD;&amp;#xA;Invoices&amp;#xD;&amp;#xA;Payments&amp;#xD;&amp;#xA;More&amp;#xD;&amp;#xA;Create' /&gt;" Guid="c01faeac-915b-4e1c-8c8b-a44b13ff9f86" SearchSteps="FuzzySelector" />
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                      <uix:Target CVScreenId="5ed4dfa8-d51e-4323-9829-9ac17f77d675" CvTextArea="1094, 153, 53, 16" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="1095, 152, 51, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tpp.reports' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tpp.reports' tag='SPAN' type='' class='' aaname='Reports' check:innerText='Reports' /&gt;" Guid="3a5183a2-9a14-4ff9-b87d-524b6efde749" SearchSteps="FuzzySelector, CV" />
                                                     </scg:List>
                                                   </uix:TargetAnchorable.Anchors>
                                                 </uix:TargetAnchorable>
@@ -405,30 +395,30 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <uix:NCheckState DisplayName="6. Check App State 'Business NetworkEnterpr…'" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="36810152-3f77-495e-a88b-9310015db6f1" Timeout="[in_WaitForElement]" Version="V3">
                           <uix:NCheckState.IfExists>
-                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,263.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_5">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="6.1 Log Message" sap:VirtualizedContainerService.HintSize="388,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Already logged into login page&quot;]" />
+                              <ui:LogMessage DisplayName="6.1 Log Message" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Already logged into login page&quot;]" />
                             </Sequence>
                           </uix:NCheckState.IfExists>
                           <uix:NCheckState.IfNotExists>
-                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,208" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_6">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Throw DisplayName="6.2 Throw Applucation exception" Exception="[new ApplicationException(&quot;Unable to find Login and Home page of Ariba portal. Hence an application exception is thrown&quot;)]" sap:VirtualizedContainerService.HintSize="388,117.33333333333333" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                              <Throw DisplayName="6.2 Throw Applucation exception" Exception="[new ApplicationException(&quot;Unable to find Login and Home page of Ariba portal. Hence an application exception is thrown&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_2" />
                             </Sequence>
                           </uix:NCheckState.IfNotExists>
                           <uix:NCheckState.Target>
-                            <uix:TargetAnchorable BrowserURL="https://portal.us.bn.cloud.ariba.com/dashboard/home" DesignTimeRectangle="17, 200, 2160, 78" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl class='menu-bar-container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='menu-bar-container' tag='DIV' type='' aaname='' check:innerText='Home&amp;#xD;&amp;#xA;Enablement&amp;#xD;&amp;#xA;Store&amp;#xD;&amp;#xA;Discovery&amp;#xD;&amp;#xA;Workbench&amp;#xD;&amp;#xA;Orders&amp;#xD;&amp;#xA;Fulfillment&amp;#xD;&amp;#xA;Invoices&amp;#xD;&amp;#xA;Payments&amp;#xD;&amp;#xA;More&amp;#xD;&amp;#xA;Create' /&gt;" Guid="fac77f68-82c0-4325-8fa6-f4439d78a92b" ImageBase64="" InformativeScreenshot="c5bef441fa609c9ffa11565aae0a0d4e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable BrowserURL="https://portal.us.bn.cloud.ariba.com/dashboard/home" CVScreenId="13236bd7-7ab6-4801-958c-8dd41ece1b5a" CvElementArea="1149, 151, 17, 18" CvTextArea="1094, 153, 53, 16" CvTextArgument="Reports" CvType="ArrowButton" DesignTimeRectangle="1090, 134, 77, 52" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='menu-item' parentid='tpp.reports' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='menu-item' parentid='tpp.reports' tag='DIV' type='' aaname='' check:innerText='Reports' /&gt;" Guid="2dad0dba-9ab5-43cf-a8e6-aaa723e5db2c" ImageBase64="" InformativeScreenshot="c4fbdefd77ba0f87ef2b23d4ffbe2891.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Business Network*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target DesignTimeRectangle="17, 122, 2160, 78" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;div&amp;gt;app-dashboard&amp;gt;div&amp;gt;sc-shellbar&amp;gt;div&amp;gt;div&amp;gt;fd-shellbar&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='fd-shellbar fd-shellbar--xl' aaname='' check:innerText='Business Network&amp;#xD;&amp;#xA;Enterprise Account&amp;#xD;&amp;#xA;WW' /&gt;" Guid="79103843-01b5-4edf-b549-3abed6aaf84b" SearchSteps="FuzzySelector" />
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target CVScreenId="13236bd7-7ab6-4801-958c-8dd41ece1b5a" CvTextArea="1094, 153, 53, 16" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="1095, 152, 51, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='tpp.reports' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tpp.reports' tag='SPAN' type='' class='' aaname='Reports' check:innerText='Reports' /&gt;" Guid="88c1949a-ba36-46a8-9c50-809fb54aae04" SearchSteps="FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
@@ -457,7 +447,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAM/SURBVFhHxZLLTxNRFMbnT+A/oKm0vsrDtSv3sHGnO9QiolES4kJNFBSJaEStgIJGRUVRhFqKaFDxVV7ScHnYUgWhWC0YpfhAI7r4vPfOnXaGXhVdjF/yy/3Od+6ZMwxVAPxXpKGZSEMzkYZmIg3NRBqaiTQ0E2loJoqtZQoaaZ5kn+aJ6rKoQO9VEn39rD5TT0PeMk0Uy7VJMFLFyX1Dwv+ul9oQjnte67whF/f0s9Zrk8RyI5KipNaNQmNra4RT4I3Es9S6MZ0fhWVBrfZlmdHr56wXx4jl8ngK/xdYa4I443uL2bkftDbqQegjrDUBrD4XMvQrOqJYUhtEwY1xkRg1Ev2KgqYJOhvk81Z6VyOtdoRYz4b4coZS4g3zIZnuD8dgOzGAkpYJkagKRuZgdw0g/8oLkSRr9vN35JwNwEbvsbsM28lBYq8aii9nKPcG3rP7XJcfRbG+ZghF9SG4u6eRU0WHDj9F7/MP4kZC2ZX0BS4ERQW4e6Z53ROaFQlwuj3C5+2H+7D0SB+xHfUbljOU9v539FQV+zSPix2vkXPMj6WlXbBTsiv8omtU3f0INtcOiQqobpuA/UAXiuoSL3WqLcyfsay0mywr60lazlCcVf30TFbnsxmsO+5HeWPiM1d6XgoHhKe+IK+aiAroCsygyjvOc03l15/DvvcxsRX7pMsZyvJdHXAef4qh0eTPPBn9wtGUXerDne6oqOgLuUeFS1bs4zzWFD8mK/Y8/OVyhuIoaofGuoM+nPeO0VyuzsF3CL+ZExX9CjqvKfZhHo33JrF2/xOycufd3y5nKI7tbfxBJxtG4DzUicJjvTT/e7muBuHYflul8A6h/HE5Q9ld2UfPP+uJfzrOzOw3kSbkqg/AUdCK9K2txLHt1qKWM5Qd5Z0YDM5Qb9TEq0/CqT59cwsy8lXKapN/uK5Lw0jP95KMLd5FL2comc6b0HDue4BNFOYzdLmBPI8K9QvukIw8T0pmblNWVm7z4r/Aqo1uMLIYG5pVT884ohfPeZ3oi1mSucn9V3+5hsIeQt9afWCuSrzmvcQy3l+Y5zYTev+fljOkoZlIQzORhmYiDc1EGpqJNDQTaWgm0tA8oPwES1YLjswN8o8AAAAASUVORK5CYII=" InformativeScreenshot="1b2135a9b1243a4013f8281ab4055c0f.jpg" Selector="&lt;html app='msedge.exe' title='Dashboard | SAP Business Network' /&gt;" Title="Dashboard | SAP Business Network" Url="[in_Url]" />
+        <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAM/SURBVFhHxZLLTxNRFMbnT+A/oKm0vsrDtSv3sHGnO9QiolES4kJNFBSJaEStgIJGRUVRhFqKaFDxVV7ScHnYUgWhWC0YpfhAI7r4vPfOnXaGXhVdjF/yy/3Od+6ZMwxVAPxXpKGZSEMzkYZmIg3NRBqaiTQ0E2loJoqtZQoaaZ5kn+aJ6rKoQO9VEn39rD5TT0PeMk0Uy7VJMFLFyX1Dwv+ul9oQjnte67whF/f0s9Zrk8RyI5KipNaNQmNra4RT4I3Es9S6MZ0fhWVBrfZlmdHr56wXx4jl8ngK/xdYa4I443uL2bkftDbqQegjrDUBrD4XMvQrOqJYUhtEwY1xkRg1Ev2KgqYJOhvk81Z6VyOtdoRYz4b4coZS4g3zIZnuD8dgOzGAkpYJkagKRuZgdw0g/8oLkSRr9vN35JwNwEbvsbsM28lBYq8aii9nKPcG3rP7XJcfRbG+ZghF9SG4u6eRU0WHDj9F7/MP4kZC2ZX0BS4ERQW4e6Z53ROaFQlwuj3C5+2H+7D0SB+xHfUbljOU9v539FQV+zSPix2vkXPMj6WlXbBTsiv8omtU3f0INtcOiQqobpuA/UAXiuoSL3WqLcyfsay0mywr60lazlCcVf30TFbnsxmsO+5HeWPiM1d6XgoHhKe+IK+aiAroCsygyjvOc03l15/DvvcxsRX7pMsZyvJdHXAef4qh0eTPPBn9wtGUXerDne6oqOgLuUeFS1bs4zzWFD8mK/Y8/OVyhuIoaofGuoM+nPeO0VyuzsF3CL+ZExX9CjqvKfZhHo33JrF2/xOycufd3y5nKI7tbfxBJxtG4DzUicJjvTT/e7muBuHYflul8A6h/HE5Q9ld2UfPP+uJfzrOzOw3kSbkqg/AUdCK9K2txLHt1qKWM5Qd5Z0YDM5Qb9TEq0/CqT59cwsy8lXKapN/uK5Lw0jP95KMLd5FL2comc6b0HDue4BNFOYzdLmBPI8K9QvukIw8T0pmblNWVm7z4r/Aqo1uMLIYG5pVT884ohfPeZ3oi1mSucn9V3+5hsIeQt9afWCuSrzmvcQy3l+Y5zYTev+fljOkoZlIQzORhmYiDc1EGpqJNDQTaWgm0tA8oPwES1YLjswN8o8AAAAASUVORK5CYII=" InformativeScreenshot="1b2135a9b1243a4013f8281ab4055c0f.jpg" Selector="&lt;html app='msedge.exe' title='*SAP*Business Network*' /&gt;" Title="Dashboard | SAP Business Network" Url="[in_Url]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

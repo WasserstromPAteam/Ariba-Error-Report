@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1076,1507</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1079,1507</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -39,6 +39,7 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Numerics</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -101,6 +102,7 @@
       <AssemblyReference>System.IO.Packaging</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="496,1442" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -133,6 +135,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_FilenameWithExtention">["Cleared Ariba "+Today.ToString("MM-dd-yy")+".xlsx"]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_SAPApplicationLocation">[in_Config("SAPFile_Location").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_ExceptionScreenshotFolder">[in_Config("ExScreenshotsFolderPath").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_ExportWaitTimeout">[Cint(in_Config("ExportWaitTimeout"))]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LookupWE05FileAndZcreditFile - Invoke Workflow File (Excel Workflows\LookupWE05FileAndZcreditFile.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Excel Workflows\LookupWE05FileAndZcreditFile.xaml">
@@ -154,6 +157,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_SQ01_AribaInvoiceQuery">[in_Config("SQ01_AribaInvoiceQuery").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_SQ01_AribaInvoicePrecedingValue1">[in_Config("SQ01_AribaInvoicePrecedingValue1").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_SQ01_AribaInvoicePrecedingValue2">[in_Config("SQ01_AribaInvoicePrecedingValue2").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_ExportWaitTimeout">[Cint(in_Config("ExportWaitTimeout"))]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LookupWE05FileAndAribaSAPFile - Invoke Workflow File (Excel Workflows\LookupWE05FileAndAribaSAPFile.xaml)" sap:VirtualizedContainerService.HintSize="434,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Excel Workflows\LookupWE05FileAndAribaSAPFile.xaml">
