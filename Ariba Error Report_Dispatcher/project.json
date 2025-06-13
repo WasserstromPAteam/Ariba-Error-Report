@@ -1,16 +1,16 @@
 {
-  "name": "AribaErrorReport_Dispatcher",
+  "name": "Ariba Error Report - Dispatcher",
   "projectId": "c9a94de0-0d38-4428-af03-cc9867472cd2",
   "description": "Get the list document numbers which are rejected and not delivered. Uploads them as a queue item",
   "main": "Main.xaml",
   "dependencies": {
-    "Excel.Libraries": "[1.0.2-alpha]",
-    "O365.for.Uipath_Svc": "[1.0.1]",
-    "SAP.Resuable.Components": "[1.0.13]",
-    "UiPath.Excel.Activities": "[2.23.4]",
-    "UiPath.System.Activities": "[24.10.3]",
-    "UiPath.Testing.Activities": "[24.10.0]",
-    "UiPath.UIAutomation.Activities": "[24.10.0]"
+    "Excel.Libraries": "[1.0.2]",
+    "O365.for.Uipath_Svc": "[1.0.2]",
+    "SAP.Resuable.Components": "[1.0.14]",
+    "UiPath.Excel.Activities": "[3.0.1]",
+    "UiPath.System.Activities": "[25.4.4]",
+    "UiPath.Testing.Activities": "[25.4.0]",
+    "UiPath.UIAutomation.Activities": "[25.10.6]"
   },
   "webServices": [],
   "entitiesStores": [],
