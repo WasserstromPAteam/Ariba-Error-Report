@@ -7,6 +7,7 @@
     <x:Property Name="inColList" Type="InArgument(x:String)" />
     <x:Property Name="in_OutputSheet" Type="InArgument(x:String)" />
     <x:Property Name="out_Dt_WE05" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_RejectionFile" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -132,10 +133,11 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Performs lookup between WE05" DisplayName="Lookup_WE05_and_Ariba_Report" sap:VirtualizedContainerService.HintSize="688,3777.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Performs lookup between WE05" DisplayName="Lookup_WE05_and_Ariba_Report" sap:VirtualizedContainerService.HintSize="895.9999999999999,4306" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Dt_AribaInvoice" />
       <Variable x:TypeArguments="sd:DataColumn[]" Name="test" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Dt_RejectedInvoice" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -143,17 +145,17 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="1. Log Message" sap:VirtualizedContainerService.HintSize="626,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Initiated lookup WE05 and Ariba Report&quot;]" />
-    <ui:RetryScope DisplayName="2. Retry Scope- Read excel" sap:VirtualizedContainerService.HintSize="626,86" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+    <ui:LogMessage DisplayName="1. Log Message" sap:VirtualizedContainerService.HintSize="570,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Initiated lookup WE05 and Ariba Report&quot;]" />
+    <ui:RetryScope DisplayName="2. Retry Scope- Read excel" sap:VirtualizedContainerService.HintSize="570,86" sap2010:WorkflowViewState.IdRef="RetryScope_1">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,360.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,332.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <e:Read_Excel_as_Database DataTable="[out_Dt_WE05]" DisplayName="2.1 Read WE05 Excel as Database" FileDirectory="[in_DownloadPath]" FileName="[in_We05File]" sap:VirtualizedContainerService.HintSize="354,272.6666666666667" sap2010:WorkflowViewState.IdRef="Read_Excel_as_Database_1" SheetName="[in_SheetName]">
+            <e:Read_Excel_as_Database DataTable="[out_Dt_WE05]" DisplayName="2.1 Read WE05 Excel as Database" FileDirectory="[in_DownloadPath]" FileName="[in_We05File]" sap:VirtualizedContainerService.HintSize="382,272.6666666666667" sap2010:WorkflowViewState.IdRef="Read_Excel_as_Database_1" SheetName="[in_SheetName]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,25 +176,25 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <If Condition="[out_Dt_WE05.RowCount&lt;1]" DisplayName="3. If WE05 is null" sap:VirtualizedContainerService.HintSize="626,479.3333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[out_Dt_WE05.RowCount&lt;1]" DisplayName="3. If WE05 is null" sap:VirtualizedContainerService.HintSize="570,86" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,202.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw DisplayName="3.1 Throw Business exception" Exception="[new BusinessRuleException(&quot;No data found in WE05 file exported from SAP&quot;)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          <Throw DisplayName="3.1 Throw Business exception" Exception="[new BusinessRuleException(&quot;No data found in WE05 file exported from SAP&quot;)]" sap:VirtualizedContainerService.HintSize="382,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -201,7 +203,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="4. Log Message" sap:VirtualizedContainerService.HintSize="626,86" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Reading ariba report csv file&quot;]">
+    <ui:LogMessage DisplayName="4. Log Message" sap:VirtualizedContainerService.HintSize="570,86" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Reading ariba report csv file&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -209,7 +211,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[Dt_AribaInvoice]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="5. Read Ariba file CSV" FilePath="[in_AribaFile]" sap:VirtualizedContainerService.HintSize="626,86" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1">
+    <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[Dt_AribaInvoice]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="5. Read Ariba file CSV" FilePath="[in_AribaFile]" sap:VirtualizedContainerService.HintSize="570,86" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -217,7 +219,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadCsvFile>
-    <If Condition="[Dt_AribaInvoice.RowCount&lt;1]" DisplayName="6. If Ariba Report in null" sap:VirtualizedContainerService.HintSize="626,86" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[Dt_AribaInvoice.RowCount&lt;1]" DisplayName="6. If Ariba Report in null" sap:VirtualizedContainerService.HintSize="570,86" sap2010:WorkflowViewState.IdRef="If_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -244,7 +246,42 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="7. Log Message" sap:VirtualizedContainerService.HintSize="626,86" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Filtering out unwanted columns from WE05 file&quot;]">
+    <ui:ReadCsvFile PathResource="{x:Null}" DataTable="[Dt_RejectedInvoice]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="7. Read Rejected Invoice file CSV" FilePath="[in_RejectionFile]" sap:VirtualizedContainerService.HintSize="570,172" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadCsvFile>
+    <If Condition="[Dt_RejectedInvoice.RowCount&lt;1]" DisplayName="8. If Rejected Invoice Report in null" sap:VirtualizedContainerService.HintSize="570,437.3333333333333" sap2010:WorkflowViewState.IdRef="If_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Throw DisplayName="6.1 Throw" Exception="[new BusinessRuleException(&quot;No data found in Rejected Invoice Report downloaded from Ariba supplier portal&quot;)]" sap:VirtualizedContainerService.HintSize="382,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_3" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:LogMessage DisplayName="7. Log Message" sap:VirtualizedContainerService.HintSize="570,86" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Filtering out unwanted columns from WE05 file&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -252,7 +289,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:FilterDataTable DataTable="[out_Dt_WE05]" DisplayName="8. Filter WE05 Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,196" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_Dt_WE05]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable DataTable="[out_Dt_WE05]" DisplayName="8. Filter WE05 Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="570,196" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_Dt_WE05]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -270,8 +307,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
-    <ui:LogMessage DisplayName="9. Log Message" sap:VirtualizedContainerService.HintSize="626,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Adding list of new columns into WE05 file&quot;]" />
-    <InvokeMethod DisplayName="10. Invoke Method" sap:VirtualizedContainerService.HintSize="626,170.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="AddRange">
+    <ui:LogMessage DisplayName="9. Log Message" sap:VirtualizedContainerService.HintSize="570,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Adding list of new columns into WE05 file&quot;]" />
+    <InvokeMethod DisplayName="10. Invoke Method" sap:VirtualizedContainerService.HintSize="570,170.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="AddRange">
       <InvokeMethod.TargetObject>
         <InArgument x:TypeArguments="sd:DataColumnCollection">[out_Dt_WE05.Columns]</InArgument>
       </InvokeMethod.TargetObject>
@@ -283,14 +320,14 @@
       </sap:WorkflowViewStateService.ViewState>
       <InArgument x:TypeArguments="sd:DataColumn[]">[inColList.Split(New Char() {","c}).Select(Function(colName) New System.Data.DataColumn(colName)).ToArray()]</InArgument>
     </InvokeMethod>
-    <ui:LogMessage DisplayName="11. Log Message" sap:VirtualizedContainerService.HintSize="626,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Performing string operation on column document number before performing lookup&quot;]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_AribaInvoice]" DisplayName="12. For Each Row in Ariba invoice Data Table" sap:VirtualizedContainerService.HintSize="626,396" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:LogMessage DisplayName="11. Log Message" sap:VirtualizedContainerService.HintSize="570,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Performing string operation on column document number before performing lookup&quot;]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_AribaInvoice]" DisplayName="12. For Each Row in Ariba invoice Data Table" sap:VirtualizedContainerService.HintSize="570,86" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,168" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -309,12 +346,42 @@
       </ui:ForEachRow.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_RejectedInvoice]" DisplayName="13. For Each Row in Ariba invoice Data Table" sap:VirtualizedContainerService.HintSize="570,368" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,168" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="12.1 Assign" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Object">[row.item("Invoice #")]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Object">[left(row.item("Invoice #").ToString,10)]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:LogMessage DisplayName="13. Log Message" sap:VirtualizedContainerService.HintSize="626,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Performing lookup&quot;]">
+    <ui:LogMessage DisplayName="13. Log Message" sap:VirtualizedContainerService.HintSize="570,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Performing lookup&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -322,35 +389,36 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_Dt_WE05]" DisplayName="14. For Each Row inWE05  Data Table" sap:VirtualizedContainerService.HintSize="626,1084" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_Dt_WE05]" DisplayName="14. For Each Row inWE05  Data Table" sap:VirtualizedContainerService.HintSize="570,1404" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,884" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="536,1204" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Status" />
+              <Variable x:TypeArguments="x:String" Name="RejectedReason" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[Dt_AribaInvoice]" DisplayName="14.1 Lookup Data Table" sap:VirtualizedContainerService.HintSize="530,332.6666666666667" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="Invoice #" LookupValue="[row.item(&quot;Document&quot;).ToString]" TargetColumnName="Invoice Status">
+            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[Dt_AribaInvoice]" DisplayName="14.1 Lookup Data Table" sap:VirtualizedContainerService.HintSize="502,332.6666666666667" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="Invoice #" LookupValue="[row.item(&quot;Document&quot;).ToString]" TargetColumnName="Invoice Status">
               <ui:LookupDataTable.CellValue>
                 <OutArgument x:TypeArguments="x:String">[Status]</OutArgument>
               </ui:LookupDataTable.CellValue>
             </ui:LookupDataTable>
-            <If Condition="[not string.IsNullOrEmpty(Status)]" DisplayName="14.2 If status found" sap:VirtualizedContainerService.HintSize="530,463.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[not string.IsNullOrEmpty(Status)]" DisplayName="14.2 If status found" sap:VirtualizedContainerService.HintSize="502,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,168" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -367,7 +435,46 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[Dt_RejectedInvoice]" DisplayName="14.1 Lookup Data Table" sap:VirtualizedContainerService.HintSize="502,332.6666666666667" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnName="Invoice #" LookupValue="[row.item(&quot;Document&quot;).ToString]" TargetColumnName="History">
+              <ui:LookupDataTable.CellValue>
+                <OutArgument x:TypeArguments="x:String">[RejectedReason]</OutArgument>
+              </ui:LookupDataTable.CellValue>
+            </ui:LookupDataTable>
+            <If Condition="[not string.IsNullOrEmpty(Status)]" DisplayName="14.2 If status found" sap:VirtualizedContainerService.HintSize="502,421.3333333333333" sap2010:WorkflowViewState.IdRef="If_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,168" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="14.3 Assign status" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Object">[row.item("Rejection Reason")]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Object">[RejectedReason]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -386,7 +493,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[out_Dt_WE05]" DisplayName="15. Write Range WE05 Workbook" sap:VirtualizedContainerService.HintSize="626,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_OutputSheet]" WorkbookPath="[in_DownloadPath+&quot;\&quot;+in_We05File]" />
-    <ui:LogMessage DisplayName="16. Log Message" sap:VirtualizedContainerService.HintSize="626,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Lookup WE05 and Ariba Report completed&quot;]" />
+    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[out_Dt_WE05]" DisplayName="15. Write Range WE05 Workbook" sap:VirtualizedContainerService.HintSize="570,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_OutputSheet]" WorkbookPath="[in_DownloadPath+&quot;\&quot;+in_We05File]" />
+    <ui:LogMessage DisplayName="16. Log Message" sap:VirtualizedContainerService.HintSize="570,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Lookup WE05 and Ariba Report completed&quot;]" />
   </Sequence>
 </Activity>

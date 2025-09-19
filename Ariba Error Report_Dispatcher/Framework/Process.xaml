@@ -104,9 +104,10 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="416,787.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="922.6666666666666,623.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Dt_WE05" />
     </Sequence.Variables>
@@ -116,8 +117,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lookup WE05 and Ariba Report - Invoke Workflow File (Excel workflows\Lookup WE05 and Ariba Report.xaml)" sap:VirtualizedContainerService.HintSize="354,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Excel workflows\Lookup WE05 and Ariba Report.xaml">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Lookup WE05 and Ariba Report - Invoke Workflow File (Excel workflows\Lookup WE05 and Ariba Report.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Excel workflows\Lookup WE05 and Ariba Report.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_We05File">[in_Config("WE05FileName").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_SheetName">[in_Config("WE05InputSheet").ToString]</InArgument>
@@ -126,9 +127,10 @@
         <InArgument x:TypeArguments="x:String" x:Key="inColList">[in_Config("ColumnListToAdd").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_OutputSheet">[in_Config("WE05OutputSheet").ToString]</InArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_Dt_WE05">[Dt_WE05]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_RejectionFile">[in_Config("DownloadPath").ToString+"\"+now.tostring("MMddyy")+"\"+in_Config("RejectedInvoiceFileName").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload Queue Item - Invoke Workflow File (Core workflows\Upload Queue Item.xaml)" sap:VirtualizedContainerService.HintSize="354,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Core workflows\Upload Queue Item.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload Queue Item - Invoke Workflow File (Core workflows\Upload Queue Item.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Core workflows\Upload Queue Item.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_Dt_WE05">[Dt_WE05]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_WE05FilePath">[in_Config("DownloadPath").ToString+"\"+now.tostring("MMddyy")+"\"+in_Config("WE05FileName").ToString]</InArgument>
