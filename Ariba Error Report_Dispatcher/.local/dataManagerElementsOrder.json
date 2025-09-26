@@ -193,11 +193,14 @@
       "Path": "Excel workflows/Lookup WE05 and Ariba Report.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Dt_RejectedInvoice&Sequence_1",
+        "RejectedReason&Sequence_3",
         "Dt_AribaInvoice&Sequence_1",
         "test&Sequence_1",
         "Status&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_RejectionFile",
         "in_We05File",
         "in_SheetName",
         "in_DownloadPath",
