@@ -1,0 +1,12 @@
+﻿{
+  "Name": "2. Use Browser Edge Dashboard  SAP Business Network",
+  "Type": "App",
+  "Id": "YjJs4BZfE0yCzFGojZ_2Dw",
+  "Reference": "En1p9Niu10GlVIHE6F11ag/YjJs4BZfE0yCzFGojZ_2Dw",
+  "Created": "2025-09-29T12:01:23.9337922Z",
+  "Updated": "2025-09-29T12:01:23.9337922Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

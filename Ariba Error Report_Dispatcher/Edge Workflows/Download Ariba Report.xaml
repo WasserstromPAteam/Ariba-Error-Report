@@ -119,25 +119,21 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Download_Ariba_Report" sap:VirtualizedContainerService.HintSize="922.6666666666666,4095.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Download_Ariba_Report" sap:VirtualizedContainerService.HintSize="1208,4003" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="1. Use Browser Edge: SAP Business Network Supplier" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="518,4072.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="1. Use Browser Edge: SAP Business Network Supplier" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="518,3980" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,3831.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,3740" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:Int32" Name="Index">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Int32" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
               <Variable x:TypeArguments="si:FileInfo" Name="DownlaodedReport" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
@@ -145,8 +141,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="2. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Getting the index ofthe invoices row and click on invoice&quot;]" />
-            <uix:NGetAttributeGeneric x:TypeArguments="x:Int32" Attribute="tableRow" DisplayName="3. Get Attribute 'invoices'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,242" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[Index]" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
+            <ui:LogMessage DisplayName="2. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Getting the index ofthe invoices row and click on invoice&quot;]" />
+            <uix:NGetAttributeGeneric x:TypeArguments="x:Int32" Attribute="tableRow" DisplayName="3. Get Attribute 'invoices'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,239" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[Index]" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
               <uix:NGetAttributeGeneric.Target>
                 <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Supplier.aw/109550045/aw?awh=r&amp;awssk=OyRGT3tH&amp;dard=1#b0" CVScreenId="aebdcdb9-d69a-4046-bd2a-5c7916f7a3f1" CvTextArea="200, 540, 72, 19" CvTextArgument="invoices" CvType="Text" DesignTimeRectangle="180, 525, 225, 52" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TD' aaname='invoices ' innertext='invoices ' tableCol='2' visibleinnertext='invoices' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TD' aaname='invoices ' innertext='invoices ' type='' visibleinnertext='invoices' class='tableBody w-tbl-cell' check:text='invoices' /&gt;" Guid="5a5d30bc-c54e-443a-aaf5-b70746eae720" InformativeScreenshot="79410e3cbacf05142fab95a2f2c286db.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SAP Business Network Supplier' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -157,7 +153,7 @@
                 </uix:TargetAnchorable>
               </uix:NGetAttributeGeneric.Target>
             </uix:NGetAttributeGeneric>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="4. Click 'invoices'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,190.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="4. Click 'invoices'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Supplier.aw/109550045/aw?awh=r&amp;awssk=OyRGT3tH&amp;dard=1#b0" CVScreenId="6bf69696-265c-46bf-9db2-347be79889eb" CvElementArea="120, 530, 39, 38" CvType="RadioButton" DesignTimeRectangle="122, 529, 37, 39" DesignTimeScaleFactor="1.5" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tableRow='{0}' tag='TD' /&gt;&quot;, Index)]" FuzzySelectorArgument="&lt;webctrl type='' tag='TD' class='tableBody w-tbl-cell' aaname='  ' /&gt;" Guid="31ce85d3-ae86-40ad-b5d1-71ecfb552d9e" InformativeScreenshot="15be4bbb680fd990f8d703ab13a869e3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SAP Business Network Supplier' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -168,8 +164,8 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:LogMessage DisplayName="5. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Clicking on download button&quot;]" />
-            <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="6. Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[DownlaodedReport]" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1">
+            <ui:LogMessage DisplayName="5. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Clicking on download button&quot;]" />
+            <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="6. Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[DownlaodedReport]" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1">
               <ui:GetLastDownloadedFile.Body>
                 <ActivityAction>
                   <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,280" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -215,45 +211,45 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:GetLastDownloadedFile>
-            <ui:LogMessage DisplayName="7. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Report downloaded sucessfully at : &quot;+DownlaodedReport.FullName]" />
-            <ui:LogMessage DisplayName="8. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Moving the file from downloads to Ariba folder&quot;]" />
-            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="9. CreateCurrent date  Folder" sap:VirtualizedContainerService.HintSize="450,113.33333333333333" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[in_DownloadPath+&quot;\&quot;+now.ToString(&quot;MM dd yyyy&quot;)]" />
-            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[in_DownloadPath+&quot;\Ariba Report.csv&quot;]" DisplayName="10. Move File" sap:VirtualizedContainerService.HintSize="450,193.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[DownlaodedReport.FullName]" />
-            <ui:LogMessage DisplayName="11. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Downloading and Moving the file from downloads to Ariba folder execution completed&quot;]" />
-            <ui:LogMessage DisplayName="12. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Downloading the rejected invoice report from Ariba Portal&quot;]" />
-            <uix:NGetAttributeGeneric x:TypeArguments="x:Int32" Attribute="tableRow" DisplayName="13. Get Attribute 'invoices'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,242" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[Index]" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
+            <ui:LogMessage DisplayName="7. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Report downloaded sucessfully at : &quot;+DownlaodedReport.FullName]" />
+            <ui:LogMessage DisplayName="8. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Moving the file from downloads to Ariba folder&quot;]" />
+            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="9. CreateCurrent date  Folder" sap:VirtualizedContainerService.HintSize="450,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[in_DownloadPath+&quot;\&quot;+now.ToString(&quot;MM dd yyyy&quot;)]" />
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[in_DownloadPath+&quot;\Ariba Report.csv&quot;]" DisplayName="10. Move File" sap:VirtualizedContainerService.HintSize="450,191" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[DownlaodedReport.FullName]" />
+            <ui:LogMessage DisplayName="11. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Downloading and Moving the file from downloads to Ariba folder execution completed&quot;+in_DownloadPath+&quot;\Ariba Report.csv&quot;]" />
+            <ui:LogMessage DisplayName="12. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Downloading the rejected invoice report from Ariba Portal&quot;]" />
+            <uix:NGetAttributeGeneric x:TypeArguments="x:Int32" Attribute="tableRow" DisplayName="13. Get Attribute 'invoices'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,239" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[Index]" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
               <uix:NGetAttributeGeneric.Target>
                 <uix:TargetAnchorable BrowserURL="service.ariba.com/Supplier.aw/109546066/aw" CVScreenId="a4c00c47-4cd8-49af-8b9b-3008a88a4fe1" CvTextArea="201, 821, 153, 23" CvTextArgument="Rejected Invoices" CvType="Text" DesignTimeRectangle="180, 806, 224, 52" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='_$vptpc' tag='TABLE' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' class='tableBody w-tbl-cell' aaname='Rejected Invoices ' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Rejected Invoices' /&gt;" Guid="06a969cd-4f2b-4481-9664-a48baa0e2731" InformativeScreenshot="4047f9d6fed3fef2e1d149a36f165404.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SAP Business Network Supplier' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="a4c00c47-4cd8-49af-8b9b-3008a88a4fe1" CvTextArea="201, 821, 153, 22" CvTextArgument="Rejected Invoices" CvType="Text" DesignTimeRectangle="200, 822, 152, 22" ElementType="Text" Guid="58f20e5a-6b76-4dd6-8322-7a3360e35e64" SearchSteps="CV" TargetType="ComputerVisionBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NGetAttributeGeneric.Target>
             </uix:NGetAttributeGeneric>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="14. Click 'Rejected invoices'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,190.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="14. Click 'Rejected invoices'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Supplier.aw/109550045/aw?awh=r&amp;awssk=OyRGT3tH&amp;dard=1#b0" CVScreenId="6bf69696-265c-46bf-9db2-347be79889eb" CvElementArea="120, 530, 39, 38" CvType="RadioButton" DesignTimeRectangle="120, 811, 40, 39" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tableRow='{0}' tag='TD' /&gt;&quot;, Index)]" Guid="31ce85d3-ae86-40ad-b5d1-71ecfb552d9e" InformativeScreenshot="d582b6d6d032ec4ecb03b207730c0529.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SAP Business Network Supplier' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="6bf69696-265c-46bf-9db2-347be79889eb" CvTextArea="200, 540, 72, 19" CvTextArgument="Rejected Invoices" CvType="Text" DesignTimeRectangle="180, 806, 224, 52" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='_$vptpc' matching:id='fuzzy' fuzzylevel:id='0.0' tag='TABLE' /&gt;&lt;webctrl isleaf='1' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' type='' tag='TD' class='tableBody w-tbl-cell' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Rejected Invoices' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Rejected Invoices' /&gt;" Guid="a0db5c68-cc87-4fb2-9ce1-5c55926c8a51" ImageBase64="" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:LogMessage DisplayName="15. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Clicking on download button&quot;]" />
-            <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="16. Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[DownlaodedReport]" sap:VirtualizedContainerService.HintSize="450,572.6666666666666" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2">
+            <ui:LogMessage DisplayName="15. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Clicking on download button&quot;]" />
+            <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="16. Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[DownlaodedReport]" sap:VirtualizedContainerService.HintSize="450,528" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2">
               <ui:GetLastDownloadedFile.Body>
                 <ActivityAction>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,241.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="16.1 Click 'Download'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,181.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="16.1 Click 'Download'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dab20b15-5669-4bbc-b368-5d74db1ad362" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://service.ariba.com/Supplier.aw/109550045/aw?awh=r&amp;awssk=OyRGT3tH&amp;dard=1#b0" CVScreenId="b4643087-0d67-44ad-892d-4ef36f8b4cb0" CvElementArea="338, 653, 163, 60" CvTextArea="372, 672, 94, 19" CvTextArgument="Download" CvType="Button" DesignTimeRectangle="373, 671, 94, 23" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='_whztyb' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname=' Download' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='_whztyb' tag='TABLE' /&gt;&lt;webctrl aaname=' Download' type='' tag='SPAN' class='' check:innerText='Download' /&gt;" Guid="536c5418-ef64-491a-8f3f-0175574078f5" InformativeScreenshot="401e14746a17eda3eaad835daa656386.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SAP Business Network Supplier' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -280,10 +276,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:GetLastDownloadedFile>
-            <ui:LogMessage DisplayName="17. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Report downloaded sucessfully at : &quot;+DownlaodedReport.FullName]" />
-            <ui:LogMessage DisplayName="18. Log Message" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Moving the file from downloads to Ariba folder&quot;]" />
-            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[in_DownloadPath+&quot;\Rejected Invoice.csv&quot;]" DisplayName="19. Move File" sap:VirtualizedContainerService.HintSize="450,193.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True" Path="[DownlaodedReport.FullName]" />
-            <ui:LogMessage DisplayName="20. Log Message" sap:VirtualizedContainerService.HintSize="450,171.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Downloading and Moving the file from downloads to Ariba folder execution completed&quot;]" />
+            <ui:LogMessage DisplayName="17. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Report downloaded sucessfully at : &quot;+DownlaodedReport.FullName]" />
+            <ui:LogMessage DisplayName="18. Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Moving the file from downloads to Ariba folder&quot;]" />
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[in_DownloadPath+&quot;\Rejected Invoice.csv&quot;]" DisplayName="19. Move File" sap:VirtualizedContainerService.HintSize="450,191" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True" Path="[DownlaodedReport.FullName]" />
+            <ui:LogMessage DisplayName="20. Log Message" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Downloading and Moving the file from downloads to Ariba folder execution completed&quot;+in_DownloadPath+&quot;\Rejected Invoice.csv&quot;]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

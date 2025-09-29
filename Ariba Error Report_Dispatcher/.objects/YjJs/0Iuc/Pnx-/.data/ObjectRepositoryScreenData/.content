@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="xrGHEOdBAkSadXoBuZLGLA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1042" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAM/SURBVFhHxZLLTxNRFMbnT+A/oKm0vsrDtSv3sHGnO9QiolES4kJNFBSJaEStgIJGRUVRhFqKaFDxVV7ScHnYUgWhWC0YpfhAI7r4vPfOnXaGXhVdjF/yy/3Od+6ZMwxVAPxXpKGZSEMzkYZmIg3NRBqaiTQ0E2loJoqtZQoaaZ5kn+aJ6rKoQO9VEn39rD5TT0PeMk0Uy7VJMFLFyX1Dwv+ul9oQjnte67whF/f0s9Zrk8RyI5KipNaNQmNra4RT4I3Es9S6MZ0fhWVBrfZlmdHr56wXx4jl8ngK/xdYa4I443uL2bkftDbqQegjrDUBrD4XMvQrOqJYUhtEwY1xkRg1Ev2KgqYJOhvk81Z6VyOtdoRYz4b4coZS4g3zIZnuD8dgOzGAkpYJkagKRuZgdw0g/8oLkSRr9vN35JwNwEbvsbsM28lBYq8aii9nKPcG3rP7XJcfRbG+ZghF9SG4u6eRU0WHDj9F7/MP4kZC2ZX0BS4ERQW4e6Z53ROaFQlwuj3C5+2H+7D0SB+xHfUbljOU9v539FQV+zSPix2vkXPMj6WlXbBTsiv8omtU3f0INtcOiQqobpuA/UAXiuoSL3WqLcyfsay0mywr60lazlCcVf30TFbnsxmsO+5HeWPiM1d6XgoHhKe+IK+aiAroCsygyjvOc03l15/DvvcxsRX7pMsZyvJdHXAef4qh0eTPPBn9wtGUXerDne6oqOgLuUeFS1bs4zzWFD8mK/Y8/OVyhuIoaofGuoM+nPeO0VyuzsF3CL+ZExX9CjqvKfZhHo33JrF2/xOycufd3y5nKI7tbfxBJxtG4DzUicJjvTT/e7muBuHYflul8A6h/HE5Q9ld2UfPP+uJfzrOzOw3kSbkqg/AUdCK9K2txLHt1qKWM5Qd5Z0YDM5Qb9TEq0/CqT59cwsy8lXKapN/uK5Lw0jP95KMLd5FL2comc6b0HDue4BNFOYzdLmBPI8K9QvukIw8T0pmblNWVm7z4r/Aqo1uMLIYG5pVT884ohfPeZ3oi1mSucn9V3+5hsIeQt9afWCuSrzmvcQy3l+Y5zYTev+fljOkoZlIQzORhmYiDc1EGpqJNDQTaWgm0tA8oPwES1YLjswN8o8AAAAASUVORK5CYII=" Selector="&lt;html app='msedge.exe' title='*' url='https://portal.us.bn.cloud.ariba.com/*' /&gt;" Url="[in_Url]">
+      <imageRef attrName="InformativeScreenshot" originalValue="01d3137757c6fa6ed4bb154b7f37c00f.jpg" xmlns="">0Xt8v0bUL7E-r40-xnh45Eg</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="https://service.ariba.com/Supplier.aw" IsVariable="False" Name="in_Url" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

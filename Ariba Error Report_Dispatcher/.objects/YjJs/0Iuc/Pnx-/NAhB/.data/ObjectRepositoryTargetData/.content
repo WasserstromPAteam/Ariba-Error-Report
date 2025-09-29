@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4adJFxe7p0qVyVp3lLcBqg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="portal.us.bn.cloud.ariba.com/dashboard/home" CVScreenId="9b009823-d3ca-467a-a9e7-d813c69f2ed8" CvTextArea="64, 153, 40, 13" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="57, 153, 38, 13" FullSelectorArgument="&lt;webctrl class='menu-item*' innertext='Home' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='menuitem' tag='DIV' type='' class='menu-item highlight' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Home' /&gt;" Guid="1a99d064-85ad-4b4b-84c8-636abbc68172" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*SAP*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="6a626e9a6b0c445bb1e608bfd0c222ba.png" xmlns="">06YOJnxLbIUy40HeV8t86HQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
