@@ -108,29 +108,29 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Navigate_to_Reports_Page" sap:VirtualizedContainerService.HintSize="922.6666666666666,2264.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Navigate_to_Reports_Page" sap:VirtualizedContainerService.HintSize="922.6666666666666,2442.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="1. Try Catch Navigate to Reports Page" sap:VirtualizedContainerService.HintSize="663.3333333333334,2242" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="1. Try Catch Navigate to Reports Page" sap:VirtualizedContainerService.HintSize="663.3333333333334,2420" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="2. Use Browser Edge Dashboard  SAP Business N" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="624.6666666666666,1980" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="e6a7c93a-fe6e-4daa-bbfd-92a1ac4de533" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="2. Use Browser Edge Dashboard  SAP Business N" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="624.6666666666666,2158" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="e6a7c93a-fe6e-4daa-bbfd-92a1ac4de533" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="590.6666666666666,1760.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="590.6666666666666,1938.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556.6666666666666,1698" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556.6666666666666,1876" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                   <TryCatch.Try>
-                    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="3. Retry Click on Home" sap:VirtualizedContainerService.HintSize="518,1433.3333333333333" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="3. Retry Click on Home" sap:VirtualizedContainerService.HintSize="518,1611.3333333333333" sap2010:WorkflowViewState.IdRef="RetryScope_1">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
                           <Sequence DisplayName="3.1 Action - Click" sap:VirtualizedContainerService.HintSize="416,600.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -157,22 +157,38 @@
                       </ui:RetryScope.ActivityBody>
                       <ui:RetryScope.Condition>
                         <ActivityFunc x:TypeArguments="x:Boolean">
-                          <uix:NCheckState DisplayName="4. Check App State 'Report Menu bar'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="484,723.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e6a7c93a-fe6e-4daa-bbfd-92a1ac4de533" Timeout="[in_WaitPeriod]" Version="V3">
+                          <uix:NCheckState DisplayName="4. Check App State 'Report Menu bar'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="484,901.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e6a7c93a-fe6e-4daa-bbfd-92a1ac4de533" Timeout="[in_WaitPeriod]" Version="V3">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,612.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="4.1 Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Reports option available in the menu item&quot;]" />
+                                <ui:LogMessage DisplayName="4.1 Log Message" sap:VirtualizedContainerService.HintSize="416,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Reports option available in the menu item&quot;]" />
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e6a7c93a-fe6e-4daa-bbfd-92a1ac4de533" Version="V5">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="portal.us.bn.cloud.ariba.com/dashboard/home" CVScreenId="98cf28c0-3e14-4a00-8c09-451c431ddb0d" CvElementArea="1295, 197, 21, 22" CvTextArea="1233, 201, 60, 18" CvTextArgument="Reports" CvType="ArrowButton" DesignTimeRectangle="1229, 181, 87, 58" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='menu-item' parentid='tpp.reports' tag='DIV' /&gt;" Guid="2ca083b3-62f6-4b9b-97e5-b46d6eb48cc9" InformativeScreenshot="6dc36c9cf19117e1374951c1bcac0300.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard | SAP Business Network' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CVScreenId="98cf28c0-3e14-4a00-8c09-451c431ddb0d" CvTextArea="1233, 201, 60, 18" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="1235, 201, 58, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='tpp.reports' tag='SPAN' type='' class='' aaname='Reports' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Reports' /&gt;" Guid="c0ce8b5e-28e0-40f9-b5a0-37e5b3a9aabd" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,182" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e6a7c93a-fe6e-4daa-bbfd-92a1ac4de533" Version="V5">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="portal.us.bn.cloud.ariba.com/dashboard/home" CVScreenId="2c7b8095-77a7-4f26-9ee5-007cc8401b84" CvTextArea="1241, 255, 55, 16" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="1243, 255, 54, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Reports' parentid='an.reports_reports' tag='SPAN' /&gt;" Guid="bb242b9f-6f6b-4e92-b3f3-cf41be8861d1" InformativeScreenshot="73954db4cdab17f11831e23e3bd9cc8a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Dashboard | SAP Business Network' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -249,7 +265,7 @@
                           </ui:RetryScope.ActivityBody>
                           <ui:RetryScope.Condition>
                             <ActivityFunc x:TypeArguments="x:Boolean">
-                              <uix:NCheckState DisplayName="7. Check App State 'Report Templates'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="954,487" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e6a7c93a-fe6e-4daa-bbfd-92a1ac4de533" Timeout="[in_WaitPeriod]" Version="V3">
+                              <uix:NCheckState DisplayName="7. Check App State 'Report Templates'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="484,723.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e6a7c93a-fe6e-4daa-bbfd-92a1ac4de533" Timeout="[in_WaitPeriod]" Version="V3">
                                 <uix:NCheckState.IfExists>
                                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -257,7 +273,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="7.1 Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Sucessfully navigated to Reports Page&quot;]" />
+                                    <ui:LogMessage DisplayName="7.1 Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Sucessfully navigated to Reports Page&quot;]" />
                                   </Sequence>
                                 </uix:NCheckState.IfExists>
                                 <uix:NCheckState.IfNotExists>
@@ -267,7 +283,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="7.2 Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Failed to navigate to Reports Page. Hence retrying to click on reports again&quot;]" />
+                                    <ui:LogMessage DisplayName="7.2 Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Failed to navigate to Reports Page. Hence retrying to click on reports again&quot;]" />
                                   </Sequence>
                                 </uix:NCheckState.IfNotExists>
                                 <uix:NCheckState.Target>
