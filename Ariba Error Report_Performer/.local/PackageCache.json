@@ -328,7 +328,7 @@
     {
       "Package": {
         "Id": "SAP.Resuable.Components",
-        "Version": "1.0.23"
+        "Version": "1.0.29"
       },
       "Assemblies": [
         "C:\\Users\\saiprasad\\.nuget\\packages\\csvhelper\\16.0.0\\lib/netstandard2.1/CsvHelper.dll",
@@ -378,15 +378,15 @@
         "C:\\Users\\saiprasad\\.nuget\\packages\\nlog\\4.7.15\\lib/netstandard2.0/NLog.dll",
         "C:\\Users\\saiprasad\\.nuget\\packages\\polly\\7.1.0\\lib/netstandard2.0/Polly.dll",
         "C:\\Users\\saiprasad\\.nuget\\packages\\radcommons.core\\2.0.1\\lib/netstandard2.0/net.adamec.lib.common.core.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components.ViewModels.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components.Core.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_40290702.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_44540007.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_48646778.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_52037308.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_61448876.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_66019616.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components.ViewModels.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components.Core.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_14394393.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_21475227.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_61654118.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_62352163.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_6322590.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib/net8.0-windows7.0/SAP Resuable Components_Expressions_6764873.dll",
         "C:\\Users\\saiprasad\\.nuget\\packages\\sharpziplib\\1.4.2\\lib/net6.0/ICSharpCode.SharpZipLib.dll",
         "C:\\Users\\saiprasad\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20250519.7\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll",
         "C:\\Users\\saiprasad\\.nuget\\packages\\system.componentmodel.composition\\6.0.0\\lib/net6.0/System.ComponentModel.Composition.dll",
@@ -469,7 +469,7 @@
         "C:\\Users\\saiprasad\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\saiprasad\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components\\1.0.23"
+      "Path": "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components\\1.0.29"
     }
   ],
   "Conflicts": [],
@@ -2127,7 +2127,7 @@
     },
     "SAP.Resuable.Components": {
       "Id": "SAP.Resuable.Components",
-      "Version": "1.0.23",
+      "Version": "1.0.29",
       "Dependencies": [
         {
           "Item1": "UiPath.System.Activities",
@@ -2139,13 +2139,13 @@
         },
         {
           "Item1": "SAP.Resuable.Components.Library.Runtime",
-          "Item2": "[1.0.23, )"
+          "Item2": "[1.0.29, )"
         }
       ]
     },
     "SAP.Resuable.Components.Library.Runtime": {
       "Id": "SAP.Resuable.Components.Library.Runtime",
-      "Version": "1.0.23",
+      "Version": "1.0.29",
       "Dependencies": [
         {
           "Item1": "UiPath.System.Activities.Runtime",
@@ -6431,29 +6431,29 @@
     {
       "Package": {
         "Id": "SAP.Resuable.Components",
-        "Version": "1.0.23"
+        "Version": "1.0.29"
       },
       "Assemblies": [
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components.ViewModels.dll"
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components.ViewModels.dll"
       ],
-      "Path": "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components\\1.0.23"
+      "Path": "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components\\1.0.29"
     },
     {
       "Package": {
         "Id": "SAP.Resuable.Components.Library.Runtime",
-        "Version": "1.0.23"
+        "Version": "1.0.29"
       },
       "Assemblies": [
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components.Core.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_40290702.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_44540007.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_48646778.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_52037308.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_61448876.dll",
-        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_66019616.dll"
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components.Core.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_14394393.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_21475227.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_61654118.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_62352163.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_6322590.dll",
+        "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29\\lib\\net8.0-windows7.0\\SAP Resuable Components_Expressions_6764873.dll"
       ],
-      "Path": "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.23"
+      "Path": "C:\\Users\\saiprasad\\.nuget\\packages\\sap.resuable.components.library.runtime\\1.0.29"
     },
     {
       "Package": {
